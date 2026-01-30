@@ -2,3 +2,12 @@
 .fp/
 
 .env
+
+# Dependencies
+node_modules/
+
+# Slidev build output
+dist/
+
+# Bun
+bun.lockb
