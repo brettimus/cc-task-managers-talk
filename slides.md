@@ -366,25 +366,469 @@ We just need tools designed for agent workflows, not human workflows.
 - Observe the Plan → Execute → Review cycle
 
 ---
+layout: section
+---
 
-## The Landscape
+# The Framework
 
-Current tools for agent task management:
+Plan → Execute → Review
 
-- **fp** - Fiber's issue tracking CLI
-- **Taskmaster** - AI-native task orchestration
-- **Built-in TodoWrite** - Claude Code's native tool
+<!--
+Now let's talk about the solution. A simple framework that makes agent work actually work.
+-->
 
 ---
 
-## Plan → Execute → Review
+# Plan → Execute → Review
 
-The agent workflow pattern:
+<div class="flex justify-center mt-12">
 
-1. **Plan**: Claim an issue, understand requirements
-2. **Execute**: Implement with frequent commits
-3. **Review**: Self-review + automated checks
-4. **Complete**: Mark done, log handoff notes
+```mermaid {scale: 0.9}
+graph LR
+    P[📋 PLAN] --> E[⚡ EXECUTE]
+    E --> R[🔍 REVIEW]
+    R --> P
+
+    style P fill:#3b82f6,stroke:#1d4ed8,color:#fff
+    style E fill:#22c55e,stroke:#16a34a,color:#fff
+    style R fill:#a855f7,stroke:#7c3aed,color:#fff
+```
+
+</div>
+
+<v-clicks>
+
+<div class="grid grid-cols-3 gap-4 mt-8 text-center">
+
+<div class="p-4 bg-blue-500/10 rounded-lg">
+
+**PLAN**
+
+Break work into atomic tasks
+
+</div>
+
+<div class="p-4 bg-green-500/10 rounded-lg">
+
+**EXECUTE**
+
+Focused work with context
+
+</div>
+
+<div class="p-4 bg-purple-500/10 rounded-lg">
+
+**REVIEW**
+
+Per-task, not per-PR
+
+</div>
+
+</div>
+
+</v-clicks>
+
+<!--
+This is the core cycle. Plan your work, execute with focus, review incrementally.
+Each phase feeds into the next. Let's look at each one.
+-->
+
+---
+
+# 📋 PLAN
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+
+<div>
+
+### Break work into atomic tasks
+
+<v-clicks>
+
+- 1-3 hours of focused work
+- Clear scope, clear completion criteria
+- Dependencies explicit
+- One responsibility per task
+
+</v-clicks>
+
+</div>
+
+<div v-click>
+
+```bash
+fp issue create \
+  --title "Add user auth middleware" \
+  --parent EPIC-123
+
+fp issue create \
+  --title "Implement refresh tokens" \
+  --parent EPIC-123 \
+  --depends AUTH-001
+```
+
+</div>
+
+</div>
+
+<v-click>
+
+<div class="mt-8 p-4 bg-blue-500/10 rounded-lg">
+
+**Key insight:** A solid plan = easier execution. Agents (and humans) work better with clear scope.
+
+</div>
+
+</v-click>
+
+<!--
+Planning is about breaking work into chunks that fit in an agent's context window.
+Not just small tasks - atomic tasks with clear boundaries.
+The task manager becomes your shared scratch notes with Claude.
+-->
+
+---
+
+# 📋 PLAN: Sharing Your Scratch Notes
+
+<div class="text-lg mt-8 opacity-80">
+
+Developers often keep scratch notes as they develop:
+
+</div>
+
+<div class="grid grid-cols-2 gap-8 mt-4">
+
+<div>
+
+### Before task managers
+
+- Notes in your head
+- Random text file
+- Slack DM to yourself
+- That sticky note somewhere
+
+</div>
+
+<div v-click>
+
+### With agent-native task managers
+
+- Structured issues
+- Dependencies tracked
+- Progress logged
+- **Claude can read them**
+
+</div>
+
+</div>
+
+<v-click>
+
+<div class="mt-8 p-4 bg-blue-500/10 rounded-lg text-center text-lg">
+
+**A task manager lets you share your scratch notes with Claude**
+
+It's a shared brain — persistent, structured, collaborative
+
+</div>
+
+</v-click>
+
+<!--
+This is the key mental model shift. You're not just managing tasks - you're sharing your thinking with the agent.
+Your scratch notes become shared context.
+-->
+
+---
+
+# ⚡ EXECUTE
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+
+<div>
+
+### Focused, scoped work
+
+<v-clicks>
+
+- Agent claims one task
+- Full context loaded
+- Works to clear completion criteria
+- Commits link to issues
+
+</v-clicks>
+
+</div>
+
+<div v-click>
+
+```bash
+# Start of session
+fp issue update \
+  --status in-progress AUTH-002
+
+fp context AUTH-002
+# → Loads issue, parent, dependencies
+
+# During work
+git commit -m "feat(AUTH-002): ..."
+
+# Progress logging
+fp comment AUTH-002 \
+  "Implemented token refresh,
+   working on expiry handling..."
+```
+
+</div>
+
+</div>
+
+<v-click>
+
+<div class="mt-6 p-4 bg-green-500/10 rounded-lg">
+
+**Structured memory persists across sessions.** Context window resets — the task manager doesn't.
+
+</div>
+
+</v-click>
+
+<!--
+Execution is where agents shine. Give them a clear task, loaded context, and let them work.
+The magic is that all this context persists. Next session, pick up where you left off.
+-->
+
+---
+
+# ⚡ EXECUTE: Easy Offloading
+
+<div class="mt-8">
+
+During focused work, you notice something unrelated:
+
+</div>
+
+<v-clicks>
+
+<div class="mt-4 p-4 bg-neutral-800 rounded-lg font-mono text-sm">
+
+"Hmm, that test file should be refactored... but that's not what I'm working on"
+
+</div>
+
+<div class="mt-6">
+
+### Old way: Mental tax
+
+- Remember it (you won't)
+- Add a TODO comment (goes stale)
+- Context switch now (loses focus)
+
+</div>
+
+<div class="mt-6">
+
+### With task managers: Quick capture
+
+```bash
+fp issue create --title "Refactor auth tests" --parent EPIC-123
+# → Created AUTH-005
+```
+
+Back to your actual work. Zero context switch.
+
+</div>
+
+</v-clicks>
+
+<!--
+This is one of the underrated benefits. You or the agent can capture new work items without losing focus.
+No mental overhead of remembering things for later.
+-->
+
+---
+
+# 🔍 REVIEW
+
+<div class="text-xl mt-8 opacity-80">
+
+More execution can happen now → Review is the bottleneck
+
+</div>
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+
+<div>
+
+### The old review model
+
+<v-clicks>
+
+- Wait for PR
+- 47 commits to review
+- "What was this change about?"
+- Missing context
+
+</v-clicks>
+
+</div>
+
+<div v-click>
+
+### Task-based review
+
+<v-clicks>
+
+- Review per-task, not per-PR
+- See what changed for AUTH-002
+- Progress comments explain why
+- Smaller, focused diffs
+
+</v-clicks>
+
+</div>
+
+</div>
+
+<v-click>
+
+<div class="mt-6 p-4 bg-purple-500/10 rounded-lg">
+
+**Tools like `fp issue diff` and Vibe Kanban diffs make this easier:** See exactly what changed for each task.
+
+</div>
+
+</v-click>
+
+<!--
+Review is where most teams are struggling now. Agents can produce so much code.
+The solution is reviewing in smaller chunks, tied to tasks, with context preserved.
+-->
+
+---
+
+# 🔍 REVIEW: Per-Task Diffs
+
+```bash
+$ fp issue diff AUTH-002
+
+Showing changes for AUTH-002: Implement refresh tokens
+  Status: done
+  Commits: 3 (abc123, def456, ghi789)
+
+src/auth/refresh.ts   | 47 ++++++++++++++++++++++
+src/auth/middleware.ts | 12 ++++++
+tests/auth/refresh.test.ts | 38 ++++++++++++++++++
+```
+
+<v-clicks>
+
+<div class="mt-8 grid grid-cols-2 gap-8">
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+**What you see:** Just the changes for this task
+
+</div>
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+**What you skip:** All the other work that doesn't matter for this review
+
+</div>
+
+</div>
+
+<div class="mt-6 text-center text-lg opacity-80">
+
+Review becomes tractable when you review one thing at a time
+
+</div>
+
+</v-clicks>
+
+<!--
+This is the key insight. Don't review the whole PR at once.
+Review task by task. See the changes in context.
+This is how you can actually validate agent work.
+-->
+
+---
+
+# The Cycle in Practice
+
+<div class="text-sm mt-4">
+
+```
+Session 1                     Session 2                     Session 3
+─────────                     ─────────                     ─────────
+fp tree                       fp tree                       fp tree
+  AUTH-001 [done]              AUTH-001 [done]              AUTH-001 [done]
+  AUTH-002 [in-progress]  →    AUTH-002 [done]         →    AUTH-002 [done]
+  AUTH-003 [todo]              AUTH-003 [in-progress]       AUTH-003 [done]
+                               AUTH-004 [todo]              AUTH-004 [in-progress]
+
+Claim → Execute → Review      Claim → Execute → Review      Claim → Execute → Review
+```
+
+</div>
+
+<v-clicks>
+
+<div class="mt-6 grid grid-cols-3 gap-4">
+
+<div class="p-3 bg-blue-500/10 rounded-lg text-center text-sm">
+
+**Context preserved**
+
+Agent knows what's done
+
+</div>
+
+<div class="p-3 bg-green-500/10 rounded-lg text-center text-sm">
+
+**Progress visible**
+
+You see exactly where things are
+
+</div>
+
+<div class="p-3 bg-purple-500/10 rounded-lg text-center text-sm">
+
+**Review tractable**
+
+One task at a time
+
+</div>
+
+</div>
+
+<div class="mt-6 p-4 bg-orange-500/10 rounded-lg text-center">
+
+**The cycle continues across sessions, contexts, and even different agents**
+
+</div>
+
+</v-clicks>
+
+<!--
+This is what it looks like in practice. Each session picks up where the last left off.
+The state is always clear. Review happens incrementally.
+This is sustainable agent work.
+-->
+
+---
+layout: section
+---
+
+# The Landscape
+
+Agent-native task managers
+
+<!--
+So where can you get these benefits? Let's look at the tools that exist today.
+-->
 
 ---
 
