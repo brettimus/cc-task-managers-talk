@@ -832,6 +832,245 @@ So where can you get these benefits? Let's look at the tools that exist today.
 
 ---
 
+# A New Category: Agent-Native
+
+<div class="text-lg mt-4 opacity-80">
+
+Task managers designed for AI agents, not retrofitted for them
+
+</div>
+
+<v-clicks>
+
+<div class="mt-8 grid grid-cols-2 gap-8">
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+### Traditional tools
+
+- Jira, Linear, Asana
+- Web UIs for humans
+- API access as afterthought
+- Heavy, opinionated
+
+</div>
+
+<div class="p-4 bg-green-500/10 rounded-lg">
+
+### Agent-native tools
+
+- CLI-first interfaces
+- Git-integrated storage
+- Lightweight, focused
+- Built for context loading
+
+</div>
+
+</div>
+
+<div class="mt-6 text-center text-lg">
+
+**Key insight:** Agents thrive with tools designed for how they work
+
+</div>
+
+</v-clicks>
+
+<!--
+This is a new category. These tools aren't adaptations of existing project management software.
+They're purpose-built for agent workflows.
+-->
+
+---
+
+# The Landscape Today
+
+<div class="grid grid-cols-5 gap-4 mt-8 text-center text-sm">
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+<div class="text-2xl mb-2">🔮</div>
+<div class="font-bold">Beads</div>
+<div class="opacity-60 mt-2">Git-based graph</div>
+</div>
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+<div class="text-2xl mb-2">⚡</div>
+<div class="font-bold">fp</div>
+<div class="opacity-60 mt-2">Local-first CLI</div>
+</div>
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+<div class="text-2xl mb-2">📊</div>
+<div class="font-bold">Vibe Kanban</div>
+<div class="opacity-60 mt-2">Multi-agent</div>
+</div>
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+<div class="text-2xl mb-2">📋</div>
+<div class="font-bold">Taskmaster</div>
+<div class="opacity-60 mt-2">PRD → Tasks</div>
+</div>
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+<div class="text-2xl mb-2">🫘</div>
+<div class="font-bold">Beans</div>
+<div class="opacity-60 mt-2">Flat-file MD</div>
+</div>
+
+</div>
+
+<v-click>
+
+<div class="mt-8 p-4 bg-blue-500/10 rounded-lg text-center">
+
+All open source. All emerging in the last few months. The space is moving fast.
+
+</div>
+
+</v-click>
+
+<!--
+Here's the landscape as of today. Five tools, all open source, all with different approaches.
+Let's look at what makes each one unique.
+-->
+
+---
+
+# Tool Deep Dive
+
+<div class="grid grid-cols-2 gap-6 mt-6 text-sm">
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+### 🔮 Beads <span class="opacity-60 text-xs">— Steve Yegge</span>
+
+- **Storage:** Git-based issue tracker
+- **Superpower:** Dependency-aware graph
+- **Deploy:** Single Go binary
+- **Claim:** Vibe-coded in 6 days
+
+<v-click>
+
+*"50 First Dates" problem coined here*
+
+</v-click>
+
+</div>
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+### ⚡ fp <span class="opacity-60 text-xs">— fp.dev</span>
+
+- **Storage:** Local-first, per-project
+- **Superpower:** Context loading per session
+- **Deploy:** CLI (`brew install fp`)
+- **Philosophy:** "Shared brain with Claude"
+
+<v-click>
+
+*This talk is built with fp*
+
+</v-click>
+
+</div>
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+### 📊 Vibe Kanban <span class="opacity-60 text-xs">— BloopAI</span>
+
+- **Storage:** Git worktrees
+- **Superpower:** Multi-agent orchestration
+- **Deploy:** MCP server + visual board
+- **Killer feature:** Per-task diffs
+
+<v-click>
+
+*For parallel agent work*
+
+</v-click>
+
+</div>
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+### 📋 Taskmaster <span class="opacity-60 text-xs">— Eyal Toledano</span>
+
+- **Storage:** JSON task files
+- **Superpower:** PRD parsing → tasks
+- **Deploy:** MCP integration
+- **Fits:** Cursor, Windsurf, etc.
+
+<v-click>
+
+*From spec to tasks automatically*
+
+</v-click>
+
+</div>
+
+</div>
+
+<!--
+Four of the five tools. Each has a different philosophy and workflow.
+Beads is graph-first. fp is CLI-first. Vibe Kanban is visual. Taskmaster starts from PRDs.
+-->
+
+---
+
+# Tool Deep Dive (cont.)
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+### 🫘 Beans <span class="opacity-60 text-xs">— Hendrik Mans</span>
+
+- **Storage:** Flat-file markdown in `.beans/`
+- **Superpower:** GraphQL query engine (token efficient)
+- **Deploy:** CLI + TUI interface
+- **Philosophy:** Human-readable, agent-queryable
+
+<v-click>
+
+*Markdown files that don't go stale*
+
+</v-click>
+
+</div>
+
+<div v-click class="p-4 bg-blue-500/10 rounded-lg">
+
+### Pick based on your workflow
+
+| If you need... | Try... |
+|---------------|--------|
+| Dependency graphs | Beads |
+| CLI + context loading | fp |
+| Visual + multi-agent | Vibe Kanban |
+| PRD → tasks | Taskmaster |
+| Token-efficient queries | Beans |
+
+</div>
+
+</div>
+
+<v-click>
+
+<div class="mt-6 p-4 bg-orange-500/10 rounded-lg text-center">
+
+**No "best" tool.** Pick what fits how you work. They all solve the core problem: persistent agent memory.
+
+</div>
+
+</v-click>
+
+<!--
+Beans rounds out the five. And here's the key takeaway: they all solve the same fundamental problem
+but with different philosophies. Try a few and see what clicks.
+-->
+
+---
+
 ## Key Takeaways
 
 - Agents need persistent task context
