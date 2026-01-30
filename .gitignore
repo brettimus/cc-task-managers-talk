@@ -11,3 +11,9 @@ dist/
 
 # Bun
 bun.lockb
+
+# Wrangler generated types
+worker-configuration.d.ts
+
+# Wrangler local state
+.wrangler/
