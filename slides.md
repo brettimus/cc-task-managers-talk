@@ -1070,26 +1070,166 @@ but with different philosophies. Try a few and see what clicks.
 -->
 
 ---
+layout: section
+---
 
-## Key Takeaways
+# Key Takeaway
 
-- Agents need persistent task context
-- Progress logging enables session continuity
-- Commit discipline links code to purpose
-- Review automation catches issues early
+The "shared brain" with your agent
+
+<!--
+Let's wrap up with the core insight from today.
+-->
 
 ---
 
-## Resources
+# A Task Manager Is a Shared Brain
 
-- **fp CLI**: Task tracking for AI agents
-- **Claude Code**: Anthropic's coding agent
-- **This deck**: Built with Slidev + Bun
+<div class="grid grid-cols-2 gap-8 mt-8">
+
+<div>
+
+### What developers already do
+
+<v-clicks>
+
+- Keep scratch notes while coding
+- Track TODOs in your head
+- Remember context between sessions
+- Know what's next
+
+</v-clicks>
+
+</div>
+
+<div v-click>
+
+### What agents can't do (alone)
+
+<v-clicks>
+
+- Remember across context windows
+- Know what you decided yesterday
+- See the bigger picture
+- Track their own progress
+
+</v-clicks>
+
+</div>
+
+</div>
+
+<v-click>
+
+<div class="mt-8 p-6 bg-blue-500/20 rounded-lg text-center text-xl">
+
+**A task manager lets you share those notes with Claude**
+
+Persistent · Structured · Collaborative
+
+</div>
+
+</v-click>
+
+<!--
+This is the mental model shift. You already keep notes. A task manager just makes them shareable with your agent.
+It's not about managing the agent - it's about thinking together.
+-->
 
 ---
 
-## Thank You
+# Get Started
 
-Questions?
+<div class="text-lg mt-4 opacity-80 text-center">
 
-*This presentation is a meta-demonstration of the concepts it presents.*
+Try one of these tools on your next project — start small, even just tracking tasks helps
+
+</div>
+
+<div class="grid grid-cols-5 gap-4 mt-8 text-center text-sm">
+
+<a href="https://fp.dev" target="_blank" class="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition no-underline">
+<div class="text-2xl mb-2">⚡</div>
+<div class="font-bold">fp</div>
+<div class="opacity-60 mt-1 text-xs">fp.dev</div>
+</a>
+
+<a href="https://github.com/steveyegge/beads" target="_blank" class="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition no-underline">
+<div class="text-2xl mb-2">🔮</div>
+<div class="font-bold">Beads</div>
+<div class="opacity-60 mt-1 text-xs">steveyegge/beads</div>
+</a>
+
+<a href="https://github.com/BloopAI/vibe-kanban" target="_blank" class="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition no-underline">
+<div class="text-2xl mb-2">📊</div>
+<div class="font-bold">Vibe Kanban</div>
+<div class="opacity-60 mt-1 text-xs">BloopAI/vibe-kanban</div>
+</a>
+
+<a href="https://github.com/eyaltoledano/claude-task-master" target="_blank" class="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition no-underline">
+<div class="text-2xl mb-2">📋</div>
+<div class="font-bold">Taskmaster</div>
+<div class="opacity-60 mt-1 text-xs">eyaltoledano/claude-task-master</div>
+</a>
+
+<a href="https://github.com/hmans/beans" target="_blank" class="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition no-underline">
+<div class="text-2xl mb-2">🫘</div>
+<div class="font-bold">Beans</div>
+<div class="opacity-60 mt-1 text-xs">hmans/beans</div>
+</a>
+
+</div>
+
+<v-click>
+
+<div class="mt-8 p-4 bg-green-500/10 rounded-lg text-center">
+
+**All open source. All free. Pick one and try it today.**
+
+</div>
+
+</v-click>
+
+<!--
+These are the links. All open source. fp.dev for fp, then the GitHub repos for everything else.
+Don't overthink it - just pick one and start using it.
+-->
+
+---
+layout: center
+---
+
+<div class="text-center">
+
+# Thank You
+
+<div class="mt-8 text-2xl">
+
+**Brett Beutell**
+
+</div>
+
+<div class="mt-4 text-lg opacity-80">
+
+@bbeutell
+
+</div>
+
+<v-click>
+
+<div class="mt-12 p-4 bg-neutral-800 rounded-lg inline-block text-sm">
+
+*This presentation was built by a Claude Code agent*
+
+*tracking its own work with fp*
+
+</div>
+
+</v-click>
+
+</div>
+
+<!--
+Thank you! This talk was genuinely built by Claude Code using fp to track every slide as a task.
+I'm happy to answer questions about agent workflows, task managers, or how this presentation was made.
+-->
