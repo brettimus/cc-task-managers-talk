@@ -117,26 +117,243 @@ The magic is that this state persists across sessions and context windows.
 -->
 
 ---
+layout: section
+---
 
-## The Problem
+# The Pain
 
-AI coding agents struggle with:
+Why agents struggle without structured memory
 
-- **Context loss** between sessions
-- **No persistent memory** of work in progress
-- **Scattered commits** with unclear purpose
-- **Lost progress** when context windows reset
+<!--
+Let's talk about what's broken. Because if you've used Claude Code for any serious project, you've felt these problems.
+-->
 
 ---
 
-## The Solution
+# The "50 First Dates" Problem
 
-Agent-native task managers that:
+<div class="text-xl mt-8 opacity-80 italic">
+"Every morning, your AI wakes up with no memory of yesterday."
+</div>
 
-- Track work across sessions
-- Link commits to issues
-- Log progress at milestones
-- Provide clear handoff context
+<div class="text-sm mt-2 opacity-60">— Steve Yegge</div>
+
+<v-clicks>
+
+<div class="mt-8">
+
+- **New context window** = clean slate
+- Yesterday's progress? Gone.
+- That brilliant plan you worked out together? Forgotten.
+- Your coding style preferences? Explain them again.
+
+</div>
+
+<div class="mt-6 p-4 bg-orange-500/10 rounded-lg">
+
+**The irony:** The agent was doing great work. You were making progress. Then the session ended.
+
+</div>
+
+</v-clicks>
+
+<!--
+Steve Yegge coined this analogy - like the movie 50 First Dates where Drew Barrymore's character has no memory of previous days.
+Every session starts from scratch.
+-->
+
+---
+
+# Your Brain Lives Elsewhere
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+
+<div>
+
+### Where the plan lives
+
+- Your head
+- Notion / Linear / Jira
+- Random Slack messages
+- That email you sent yourself
+
+</div>
+
+<div>
+
+### Where Claude works
+
+- The current context window
+- *(that's it)*
+
+</div>
+
+</div>
+
+<v-click>
+
+<div class="mt-8 p-4 bg-red-500/10 rounded-lg text-center">
+
+**Gap:** You constantly re-explain the big picture
+
+"Remember we're building a billing system..."
+
+"The goal is to migrate users to the new API..."
+
+</div>
+
+</v-click>
+
+<!--
+This is the fundamental disconnect. You have all this context about what you're building, why, what's next.
+But every session you need to reload that into the agent.
+-->
+
+---
+
+# Context Rot
+
+<div class="mt-8">
+
+Session 1: "Let's build the authentication system"
+
+<v-clicks>
+
+Session 5: "Wait, what approach did we decide on for refresh tokens?"
+
+Session 10: "Did we handle the edge case where..."
+
+Session 20: "I think we need to refactor this, but I'm not sure what the original design was"
+
+</v-clicks>
+
+</div>
+
+<v-click>
+
+<div class="mt-8 p-4 bg-yellow-500/10 rounded-lg">
+
+**Each session starts slightly out of sync.** Context doesn't just disappear — it degrades over time.
+
+</div>
+
+</v-click>
+
+<!--
+Even when you try to maintain continuity, information degrades.
+You remember differently than the agent remembers.
+Neither of you remember exactly what was decided.
+-->
+
+---
+
+# Markdown Litter
+
+<div class="mt-8 font-mono text-sm bg-neutral-800 p-4 rounded-lg">
+
+```
+project/
+├── TODO.md          (last updated 3 weeks ago)
+├── PLAN.md          (from that one session)
+├── NOTES.md         (who wrote this?)
+├── ARCHITECTURE.md  (is this current?)
+├── .claude/
+│   └── TODO.md      (wait, there's another one?)
+└── docs/
+    └── ROADMAP.md   (definitely stale)
+```
+
+</div>
+
+<v-clicks>
+
+<div class="mt-6">
+
+- Agents create markdown files to "remember"
+- These files go stale almost immediately
+- You don't want to commit them
+- But you need *something* for context
+
+</div>
+
+<div class="mt-4 text-lg opacity-80">
+
+**Result:** A graveyard of good intentions
+
+</div>
+
+</v-clicks>
+
+<!--
+Every agent session leaves behind markdown artifacts.
+The agent is trying to help! But without a real system, these files just become noise.
+-->
+
+---
+
+# The PR Review Problem
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+
+<div>
+
+### Agent makes 47 commits
+
+```
+feat: add user model
+feat: add validation
+fix: validation edge case
+refactor: extract helper
+feat: add tests
+fix: test was wrong
+...
+```
+
+</div>
+
+<div v-click>
+
+### You need to review
+
+- What was the plan?
+- Why these decisions?
+- Did anything get missed?
+- Is this even right?
+
+</div>
+
+</div>
+
+<v-click>
+
+<div class="mt-8 p-4 bg-purple-500/10 rounded-lg">
+
+**The trust problem:** You can't verify work you can't understand.
+
+And you can't understand work without context.
+
+</div>
+
+</v-click>
+
+<!--
+This is maybe the biggest pain point for production use.
+The agent can do a LOT of work. But how do you validate it?
+Without structured tracking, you're just hoping it did the right thing.
+-->
+
+---
+layout: section
+---
+
+# The Good News
+
+These problems are solvable — with the right tooling
+
+<!--
+Here's the thing: all of these problems have solutions.
+We just need tools designed for agent workflows, not human workflows.
+-->
 
 ---
 
