@@ -14,6 +14,108 @@ mdc: true
 
 From chaos to clarity in agent workflows
 
+<div class="abs-br m-6 text-sm opacity-60">
+Brett Beutell · @bbeutell
+</div>
+
+<!--
+Welcome everyone! Today I want to show you something a bit different...
+-->
+
+---
+
+# This Talk Is a Demo
+
+Every slide you're seeing was tracked as a task
+
+```
+CCTA-vojsagkz [in-progress] Slide content: Meta demo opening
+CCTA-dtwfhyzi [todo] Deploy Slidev deck as Cloudflare Worker
+CCTA-fesnsfxb [todo] Create private GitHub repo and push initial code
+CCTA-fogpceik [todo] Slide content: Plan → Execute → Review framework
+CCTA-gyivmtgb [todo] Slide content: Closing and resources
+CCTA-mspiiwwi [todo] Slide content: Pain points of agent work
+CCTA-pqcfzgfs [todo] Slide content: The landscape of agent-native task managers
+CCTA-bulmdiry [done] Initialize Slidev presentation with Bun
+CCTA-gszknhfx [done] Set up Poke notification script for slide progress
+```
+
+<v-click>
+
+**A Claude Code agent built this presentation, tracking its own work with `fp`**
+
+</v-click>
+
+<!--
+This is actual output from fp tree, right now.
+I'm not just talking about task managers - I'm using one to build this talk.
+-->
+
+---
+
+# The Agent Workflow
+
+<div class="grid grid-cols-3 gap-8 mt-8">
+
+<div class="text-center">
+<div class="text-4xl mb-2">📋</div>
+
+### 1. Claim
+
+```bash
+fp issue update \
+  --status in-progress \
+  CCTA-vojsagkz
+```
+
+</div>
+
+<div class="text-center">
+<div class="text-4xl mb-2">⚡</div>
+
+### 2. Work
+
+```bash
+# Make changes
+git commit -m "feat: ..."
+
+# Log progress
+fp comment CCTA-vojsagkz \
+  "Added slides..."
+```
+
+</div>
+
+<div class="text-center">
+<div class="text-4xl mb-2">✅</div>
+
+### 3. Complete
+
+```bash
+fp issue update \
+  --status done \
+  CCTA-vojsagkz
+```
+
+</div>
+
+</div>
+
+<v-click>
+
+<div class="mt-8 text-center text-lg opacity-80">
+
+Every commit links to an issue. Every session has context.
+
+</div>
+
+</v-click>
+
+<!--
+This is the basic pattern. Claim work, do work, mark done.
+The magic is that this state persists across sessions and context windows.
+-->
+
 ---
 
 ## The Problem
