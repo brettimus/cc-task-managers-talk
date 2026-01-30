@@ -1,2 +1,4 @@
 # Fiberplane local issue tracking
 .fp/
+
+.env
