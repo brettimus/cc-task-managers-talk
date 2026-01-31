@@ -109,20 +109,20 @@ I'm Brett, I work at Fiberplane. We built fp, the task manager I'll be showing y
 
 # Meta Demo
 
+<div class="mt-8">
+
+**A Claude Code agent built this presentation, tracking its work with `fp`**
+
+</div>
+
+<v-click>
+
 <TerminalOutput title="fp tree">
   <TaskLine id="CCTA-vojsagkz" status="in-progress">Meta demo opening</TaskLine>
   <TaskLine id="CCTA-fogpceik" status="todo">Plan → Execute → Review slides</TaskLine>
   <TaskLine id="CCTA-pqcfzgfs" status="todo">Agent-native task managers</TaskLine>
   <TaskLine id="CCTA-bulmdiry" status="done">Initialize Slidev + Bun</TaskLine>
 </TerminalOutput>
-
-<v-click>
-
-<div class="mt-8 text-center">
-
-**A Claude Code agent built this presentation, tracking its work with `fp`**
-
-</div>
 
 </v-click>
 
