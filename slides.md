@@ -10,6 +10,10 @@ transition: slide-left
 mdc: true
 ---
 
+<style>
+@import './style.css';
+</style>
+
 # Task Managers for Claude Code
 
 From chaos to clarity in agent workflows
@@ -26,23 +30,24 @@ Welcome everyone! Today I want to show you something a bit different...
 
 # This Talk Is a Demo
 
-Every slide you're seeing was tracked as a task
+<div class="mt-4 font-mono text-sm bg-neutral-800 p-4 rounded-lg">
 
 ```
-CCTA-vojsagkz [in-progress] Slide content: Meta demo opening
-CCTA-dtwfhyzi [todo] Deploy Slidev deck as Cloudflare Worker
-CCTA-fesnsfxb [todo] Create private GitHub repo and push initial code
-CCTA-fogpceik [todo] Slide content: Plan → Execute → Review framework
-CCTA-gyivmtgb [todo] Slide content: Closing and resources
-CCTA-mspiiwwi [todo] Slide content: Pain points of agent work
-CCTA-pqcfzgfs [todo] Slide content: The landscape of agent-native task managers
-CCTA-bulmdiry [done] Initialize Slidev presentation with Bun
-CCTA-gszknhfx [done] Set up Poke notification script for slide progress
+CCTA-vojsagkz [in-progress] Meta demo opening
+CCTA-fogpceik [todo]        Plan → Execute → Review slides
+CCTA-pqcfzgfs [todo]        Agent-native task managers
+CCTA-bulmdiry [done]        Initialize Slidev + Bun
 ```
+
+</div>
 
 <v-click>
 
-**A Claude Code agent built this presentation, tracking its own work with `fp`**
+<div class="mt-8 text-center">
+
+**A Claude Code agent built this presentation, tracking its work with `fp`**
+
+</div>
 
 </v-click>
 
@@ -55,46 +60,37 @@ I'm not just talking about task managers - I'm using one to build this talk.
 
 # The Agent Workflow
 
-<div class="grid grid-cols-3 gap-8 mt-8">
+<div class="grid grid-cols-3 gap-6 mt-6">
 
-<div class="text-center">
-<div class="text-4xl mb-2">📋</div>
+<div class="text-center p-4 bg-blue-500/10 rounded-lg">
+<div class="text-3xl mb-2">1</div>
 
-### 1. Claim
+**Claim**
 
 ```bash
-fp issue update \
-  --status in-progress \
-  CCTA-vojsagkz
+fp issue update --status in-progress ID
 ```
 
 </div>
 
-<div class="text-center">
-<div class="text-4xl mb-2">⚡</div>
+<div class="text-center p-4 bg-green-500/10 rounded-lg">
+<div class="text-3xl mb-2">2</div>
 
-### 2. Work
+**Work**
 
 ```bash
-# Make changes
-git commit -m "feat: ..."
-
-# Log progress
-fp comment CCTA-vojsagkz \
-  "Added slides..."
+git commit && fp comment ID "..."
 ```
 
 </div>
 
-<div class="text-center">
-<div class="text-4xl mb-2">✅</div>
+<div class="text-center p-4 bg-purple-500/10 rounded-lg">
+<div class="text-3xl mb-2">3</div>
 
-### 3. Complete
+**Complete**
 
 ```bash
-fp issue update \
-  --status done \
-  CCTA-vojsagkz
+fp issue update --status done ID
 ```
 
 </div>
@@ -103,9 +99,9 @@ fp issue update \
 
 <v-click>
 
-<div class="mt-8 text-center text-lg opacity-80">
+<div class="mt-6 text-center opacity-80">
 
-Every commit links to an issue. Every session has context.
+Every commit links to an issue · Every session has context
 
 </div>
 
@@ -132,26 +128,29 @@ Let's talk about what's broken. Because if you've used Claude Code for any serio
 
 # The "50 First Dates" Problem
 
-<div class="text-xl mt-8 opacity-80 italic">
+<div class="text-xl mt-6 opacity-80 italic">
 "Every morning, your AI wakes up with no memory of yesterday."
 </div>
 
-<div class="text-sm mt-2 opacity-60">— Steve Yegge</div>
+<div class="text-sm mt-1 opacity-60">— Steve Yegge</div>
 
 <v-clicks>
 
-<div class="mt-8">
+<div class="grid grid-cols-2 gap-6 mt-6">
 
-- **New context window** = clean slate
-- Yesterday's progress? Gone.
-- That brilliant plan you worked out together? Forgotten.
-- Your coding style preferences? Explain them again.
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+- New context window = clean slate
+- Yesterday's progress? Gone
+- Your coding preferences? Re-explain
 
 </div>
 
-<div class="mt-6 p-4 bg-orange-500/10 rounded-lg">
+<div class="p-4 bg-orange-500/10 rounded-lg">
 
-**The irony:** The agent was doing great work. You were making progress. Then the session ended.
+**The irony:** Great work was happening. Then the session ended.
+
+</div>
 
 </div>
 
@@ -166,25 +165,21 @@ Every session starts from scratch.
 
 # Your Brain Lives Elsewhere
 
-<div class="grid grid-cols-2 gap-8 mt-8">
+<div class="grid grid-cols-2 gap-6 mt-6">
 
-<div>
+<div class="p-4 bg-neutral-800 rounded-lg">
 
 ### Where the plan lives
 
-- Your head
-- Notion / Linear / Jira
-- Random Slack messages
-- That email you sent yourself
+Your head · Notion · Slack · Email
 
 </div>
 
-<div>
+<div class="p-4 bg-neutral-800 rounded-lg">
 
 ### Where Claude works
 
-- The current context window
-- *(that's it)*
+The current context window
 
 </div>
 
@@ -192,13 +187,11 @@ Every session starts from scratch.
 
 <v-click>
 
-<div class="mt-8 p-4 bg-red-500/10 rounded-lg text-center">
+<div class="mt-6 p-4 bg-red-500/10 rounded-lg text-center">
 
 **Gap:** You constantly re-explain the big picture
 
-"Remember we're building a billing system..."
-
-"The goal is to migrate users to the new API..."
+*"Remember we're building a billing system..."*
 
 </div>
 
@@ -213,27 +206,59 @@ But every session you need to reload that into the agent.
 
 # Context Rot
 
-<div class="mt-8">
+<div class="grid grid-cols-4 gap-4 mt-6 text-center text-sm">
 
-Session 1: "Let's build the authentication system"
+<div class="p-3 bg-green-500/10 rounded-lg">
 
-<v-clicks>
+**Session 1**
 
-Session 5: "Wait, what approach did we decide on for refresh tokens?"
-
-Session 10: "Did we handle the edge case where..."
-
-Session 20: "I think we need to refactor this, but I'm not sure what the original design was"
-
-</v-clicks>
+"Build auth system"
 
 </div>
 
 <v-click>
 
-<div class="mt-8 p-4 bg-yellow-500/10 rounded-lg">
+<div class="p-3 bg-yellow-500/10 rounded-lg">
 
-**Each session starts slightly out of sync.** Context doesn't just disappear — it degrades over time.
+**Session 5**
+
+"What did we decide for refresh tokens?"
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="p-3 bg-orange-500/10 rounded-lg">
+
+**Session 10**
+
+"Did we handle that edge case?"
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="p-3 bg-red-500/10 rounded-lg">
+
+**Session 20**
+
+"What was the original design?"
+
+</div>
+
+</v-click>
+
+</div>
+
+<v-click>
+
+<div class="mt-6 p-4 bg-neutral-800 rounded-lg text-center">
+
+Context doesn't disappear — it **degrades over time**
 
 </div>
 
@@ -249,40 +274,45 @@ Neither of you remember exactly what was decided.
 
 # Markdown Litter
 
-<div class="mt-8 font-mono text-sm bg-neutral-800 p-4 rounded-lg">
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="font-mono text-xs bg-neutral-800 p-4 rounded-lg">
 
 ```
 project/
-├── TODO.md          (last updated 3 weeks ago)
-├── PLAN.md          (from that one session)
-├── NOTES.md         (who wrote this?)
-├── ARCHITECTURE.md  (is this current?)
-├── .claude/
-│   └── TODO.md      (wait, there's another one?)
-└── docs/
-    └── ROADMAP.md   (definitely stale)
+├── TODO.md        (3 weeks ago)
+├── PLAN.md        (stale)
+├── NOTES.md       (who wrote this?)
+├── .claude/TODO.md (another one?)
+└── docs/ROADMAP.md (outdated)
 ```
 
 </div>
 
-<v-clicks>
+<v-click>
 
-<div class="mt-6">
+<div class="p-4 bg-yellow-500/10 rounded-lg flex flex-col justify-center">
 
-- Agents create markdown files to "remember"
-- These files go stale almost immediately
+- Agents create files to "remember"
+- Files go stale immediately
 - You don't want to commit them
-- But you need *something* for context
+- But you need *something*
 
 </div>
 
-<div class="mt-4 text-lg opacity-80">
-
-**Result:** A graveyard of good intentions
+</v-click>
 
 </div>
 
-</v-clicks>
+<v-click>
+
+<div class="mt-4 text-center text-lg opacity-80">
+
+**A graveyard of good intentions**
+
+</div>
+
+</v-click>
 
 <!--
 Every agent session leaves behind markdown artifacts.
@@ -293,32 +323,29 @@ The agent is trying to help! But without a real system, these files just become 
 
 # The PR Review Problem
 
-<div class="grid grid-cols-2 gap-8 mt-8">
+<div class="grid grid-cols-2 gap-6 mt-6">
 
-<div>
-
-### Agent makes 47 commits
+<div class="font-mono text-xs bg-neutral-800 p-4 rounded-lg">
 
 ```
+47 commits:
 feat: add user model
 feat: add validation
-fix: validation edge case
-refactor: extract helper
-feat: add tests
-fix: test was wrong
-...
+fix: edge case
+refactor: helper
+feat: tests
+fix: test wrong...
 ```
 
 </div>
 
-<div v-click>
+<div v-click class="p-4 bg-neutral-800 rounded-lg">
 
 ### You need to review
 
 - What was the plan?
 - Why these decisions?
 - Did anything get missed?
-- Is this even right?
 
 </div>
 
@@ -326,11 +353,9 @@ fix: test was wrong
 
 <v-click>
 
-<div class="mt-8 p-4 bg-purple-500/10 rounded-lg">
+<div class="mt-6 p-4 bg-purple-500/10 rounded-lg text-center">
 
-**The trust problem:** You can't verify work you can't understand.
-
-And you can't understand work without context.
+**The trust problem:** You can't verify work you can't understand
 
 </div>
 
@@ -357,13 +382,23 @@ We just need tools designed for agent workflows, not human workflows.
 
 ---
 
-## Demo: Live Agent Workflow
+# Demo: Live Agent Workflow
 
-*This presentation was built by a Claude Code agent using an agent-native task manager*
+<div class="mt-8 text-center">
 
-- Watch the issue tracker in real-time
-- See how progress is logged
-- Observe the Plan → Execute → Review cycle
+*This presentation was built by a Claude Code agent*
+
+*using an agent-native task manager*
+
+</div>
+
+<div class="grid grid-cols-3 gap-4 mt-8 text-center text-sm">
+
+<div class="p-3 bg-blue-500/10 rounded-lg">Watch the issue tracker</div>
+<div class="p-3 bg-green-500/10 rounded-lg">See progress logging</div>
+<div class="p-3 bg-purple-500/10 rounded-lg">Plan → Execute → Review</div>
+
+</div>
 
 ---
 layout: section
@@ -381,12 +416,12 @@ Now let's talk about the solution. A simple framework that makes agent work actu
 
 # Plan → Execute → Review
 
-<div class="flex justify-center mt-12">
+<div class="flex justify-center mt-8">
 
-```mermaid {scale: 0.9}
+```mermaid {scale: 0.85}
 graph LR
-    P[📋 PLAN] --> E[⚡ EXECUTE]
-    E --> R[🔍 REVIEW]
+    P[PLAN] --> E[EXECUTE]
+    E --> R[REVIEW]
     R --> P
 
     style P fill:#3b82f6,stroke:#1d4ed8,color:#fff
@@ -396,37 +431,45 @@ graph LR
 
 </div>
 
-<v-clicks>
+<div class="grid grid-cols-3 gap-4 mt-6 text-center">
 
-<div class="grid grid-cols-3 gap-4 mt-8 text-center">
+<v-click>
 
 <div class="p-4 bg-blue-500/10 rounded-lg">
 
 **PLAN**
 
-Break work into atomic tasks
+Atomic tasks
 
 </div>
+
+</v-click>
+
+<v-click>
 
 <div class="p-4 bg-green-500/10 rounded-lg">
 
 **EXECUTE**
 
-Focused work with context
+Focused + context
 
 </div>
+
+</v-click>
+
+<v-click>
 
 <div class="p-4 bg-purple-500/10 rounded-lg">
 
 **REVIEW**
 
-Per-task, not per-PR
+Per-task diffs
 
 </div>
 
-</div>
+</v-click>
 
-</v-clicks>
+</div>
 
 <!--
 This is the core cycle. Plan your work, execute with focus, review incrementally.
@@ -435,36 +478,26 @@ Each phase feeds into the next. Let's look at each one.
 
 ---
 
-# 📋 PLAN
+# PLAN
 
-<div class="grid grid-cols-2 gap-8 mt-8">
+<div class="grid grid-cols-2 gap-6 mt-4">
 
-<div>
+<div class="p-4 bg-neutral-800 rounded-lg">
 
-### Break work into atomic tasks
-
-<v-clicks>
+### Atomic tasks
 
 - 1-3 hours of focused work
-- Clear scope, clear completion criteria
-- Dependencies explicit
-- One responsibility per task
-
-</v-clicks>
+- Clear completion criteria
+- Explicit dependencies
 
 </div>
 
-<div v-click>
+<div class="p-4 bg-neutral-800 rounded-lg">
 
 ```bash
 fp issue create \
-  --title "Add user auth middleware" \
+  --title "Auth middleware" \
   --parent EPIC-123
-
-fp issue create \
-  --title "Implement refresh tokens" \
-  --parent EPIC-123 \
-  --depends AUTH-001
 ```
 
 </div>
@@ -473,9 +506,9 @@ fp issue create \
 
 <v-click>
 
-<div class="mt-8 p-4 bg-blue-500/10 rounded-lg">
+<div class="mt-6 p-4 bg-blue-500/10 rounded-lg text-center">
 
-**Key insight:** A solid plan = easier execution. Agents (and humans) work better with clear scope.
+**Solid plan = easier execution.** Agents work better with clear scope.
 
 </div>
 
@@ -489,35 +522,23 @@ The task manager becomes your shared scratch notes with Claude.
 
 ---
 
-# 📋 PLAN: Sharing Your Scratch Notes
+# PLAN: Sharing Scratch Notes
 
-<div class="text-lg mt-8 opacity-80">
+<div class="grid grid-cols-2 gap-6 mt-6">
 
-Developers often keep scratch notes as they develop:
+<div class="p-4 bg-neutral-800 rounded-lg">
 
-</div>
+### Before
 
-<div class="grid grid-cols-2 gap-8 mt-4">
-
-<div>
-
-### Before task managers
-
-- Notes in your head
-- Random text file
-- Slack DM to yourself
-- That sticky note somewhere
+Notes in your head · Random files · Slack DMs
 
 </div>
 
-<div v-click>
+<div v-click class="p-4 bg-green-500/10 rounded-lg">
 
-### With agent-native task managers
+### With task managers
 
-- Structured issues
-- Dependencies tracked
-- Progress logged
-- **Claude can read them**
+Structured · Tracked · **Claude can read them**
 
 </div>
 
@@ -525,11 +546,11 @@ Developers often keep scratch notes as they develop:
 
 <v-click>
 
-<div class="mt-8 p-4 bg-blue-500/10 rounded-lg text-center text-lg">
+<div class="mt-6 p-4 bg-blue-500/10 rounded-lg text-center">
 
-**A task manager lets you share your scratch notes with Claude**
+**A task manager = a shared brain with Claude**
 
-It's a shared brain — persistent, structured, collaborative
+Persistent · Structured · Collaborative
 
 </div>
 
@@ -542,42 +563,27 @@ Your scratch notes become shared context.
 
 ---
 
-# ⚡ EXECUTE
+# EXECUTE
 
-<div class="grid grid-cols-2 gap-8 mt-8">
+<div class="grid grid-cols-2 gap-6 mt-4">
 
-<div>
+<div class="p-4 bg-neutral-800 rounded-lg">
 
-### Focused, scoped work
+### Focused work
 
-<v-clicks>
-
-- Agent claims one task
-- Full context loaded
-- Works to clear completion criteria
+- Claim one task
+- Load full context
 - Commits link to issues
-
-</v-clicks>
 
 </div>
 
-<div v-click>
+<div class="p-4 bg-neutral-800 rounded-lg text-sm">
 
 ```bash
-# Start of session
-fp issue update \
-  --status in-progress AUTH-002
-
-fp context AUTH-002
-# → Loads issue, parent, dependencies
-
-# During work
-git commit -m "feat(AUTH-002): ..."
-
-# Progress logging
-fp comment AUTH-002 \
-  "Implemented token refresh,
-   working on expiry handling..."
+fp issue update --status in-progress ID
+fp context ID  # Load everything
+git commit -m "feat(ID): ..."
+fp comment ID "progress..."
 ```
 
 </div>
@@ -586,9 +592,9 @@ fp comment AUTH-002 \
 
 <v-click>
 
-<div class="mt-6 p-4 bg-green-500/10 rounded-lg">
+<div class="mt-6 p-4 bg-green-500/10 rounded-lg text-center">
 
-**Structured memory persists across sessions.** Context window resets — the task manager doesn't.
+**Context window resets — the task manager doesn't**
 
 </div>
 
@@ -601,46 +607,45 @@ The magic is that all this context persists. Next session, pick up where you lef
 
 ---
 
-# ⚡ EXECUTE: Easy Offloading
+# EXECUTE: Easy Offloading
 
-<div class="mt-8">
+<div class="mt-4 p-3 bg-neutral-800 rounded-lg font-mono text-sm italic">
 
-During focused work, you notice something unrelated:
-
-</div>
-
-<v-clicks>
-
-<div class="mt-4 p-4 bg-neutral-800 rounded-lg font-mono text-sm">
-
-"Hmm, that test file should be refactored... but that's not what I'm working on"
+"That test file should be refactored... but not now"
 
 </div>
 
-<div class="mt-6">
+<div class="grid grid-cols-2 gap-6 mt-4">
 
-### Old way: Mental tax
+<v-click>
 
-- Remember it (you won't)
-- Add a TODO comment (goes stale)
-- Context switch now (loses focus)
+<div class="p-4 bg-red-500/10 rounded-lg">
+
+### Old way
+
+Remember it (you won't) · TODO comment (stale) · Context switch (loses focus)
 
 </div>
 
-<div class="mt-6">
+</v-click>
 
-### With task managers: Quick capture
+<v-click>
+
+<div class="p-4 bg-green-500/10 rounded-lg">
+
+### With task managers
 
 ```bash
-fp issue create --title "Refactor auth tests" --parent EPIC-123
-# → Created AUTH-005
+fp issue create --title "Refactor tests"
 ```
 
-Back to your actual work. Zero context switch.
+Back to work. Zero context switch.
 
 </div>
 
-</v-clicks>
+</v-click>
+
+</div>
 
 <!--
 This is one of the underrated benefits. You or the agent can capture new work items without losing focus.
@@ -649,53 +654,43 @@ No mental overhead of remembering things for later.
 
 ---
 
-# 🔍 REVIEW
+# REVIEW
 
-<div class="text-xl mt-8 opacity-80">
+<div class="text-lg mt-4 opacity-80 text-center">
 
-More execution can happen now → Review is the bottleneck
-
-</div>
-
-<div class="grid grid-cols-2 gap-8 mt-8">
-
-<div>
-
-### The old review model
-
-<v-clicks>
-
-- Wait for PR
-- 47 commits to review
-- "What was this change about?"
-- Missing context
-
-</v-clicks>
+Agents produce more code → **Review is the bottleneck**
 
 </div>
 
-<div v-click>
+<div class="grid grid-cols-2 gap-6 mt-4">
 
-### Task-based review
+<div class="p-4 bg-red-500/10 rounded-lg">
 
-<v-clicks>
+### Old model
 
-- Review per-task, not per-PR
-- See what changed for AUTH-002
-- Progress comments explain why
-- Smaller, focused diffs
-
-</v-clicks>
-
-</div>
+47 commits · "What was this?" · Missing context
 
 </div>
 
 <v-click>
 
-<div class="mt-6 p-4 bg-purple-500/10 rounded-lg">
+<div class="p-4 bg-green-500/10 rounded-lg">
 
-**Tools like `fp issue diff` and Vibe Kanban diffs make this easier:** See exactly what changed for each task.
+### Task-based
+
+Per-task diffs · Progress explains why · Smaller chunks
+
+</div>
+
+</v-click>
+
+</div>
+
+<v-click>
+
+<div class="mt-4 p-4 bg-purple-500/10 rounded-lg text-center">
+
+`fp issue diff` · Vibe Kanban diffs — **see exactly what changed per task**
 
 </div>
 
@@ -708,45 +703,55 @@ The solution is reviewing in smaller chunks, tied to tasks, with context preserv
 
 ---
 
-# 🔍 REVIEW: Per-Task Diffs
+# REVIEW: Per-Task Diffs
+
+<div class="font-mono text-xs bg-neutral-800 p-4 rounded-lg">
 
 ```bash
 $ fp issue diff AUTH-002
+Showing: AUTH-002 (Implement refresh tokens)
+Commits: 3
 
-Showing changes for AUTH-002: Implement refresh tokens
-  Status: done
-  Commits: 3 (abc123, def456, ghi789)
-
-src/auth/refresh.ts   | 47 ++++++++++++++++++++++
-src/auth/middleware.ts | 12 ++++++
-tests/auth/refresh.test.ts | 38 ++++++++++++++++++
+src/auth/refresh.ts        | 47 +++++++++++
+src/auth/middleware.ts     | 12 +++
+tests/auth/refresh.test.ts | 38 +++++++++
 ```
 
-<v-clicks>
+</div>
 
-<div class="mt-8 grid grid-cols-2 gap-8">
+<div class="grid grid-cols-2 gap-4 mt-4">
 
-<div class="p-4 bg-neutral-800 rounded-lg">
+<v-click>
 
-**What you see:** Just the changes for this task
+<div class="p-3 bg-green-500/10 rounded-lg text-center">
+
+**See:** Just this task's changes
 
 </div>
 
-<div class="p-4 bg-neutral-800 rounded-lg">
+</v-click>
 
-**What you skip:** All the other work that doesn't matter for this review
+<v-click>
 
-</div>
+<div class="p-3 bg-neutral-800 rounded-lg text-center">
 
-</div>
-
-<div class="mt-6 text-center text-lg opacity-80">
-
-Review becomes tractable when you review one thing at a time
+**Skip:** Everything else
 
 </div>
 
-</v-clicks>
+</v-click>
+
+</div>
+
+<v-click>
+
+<div class="mt-4 text-center opacity-80">
+
+Review one thing at a time
+
+</div>
+
+</v-click>
 
 <!--
 This is the key insight. Don't review the whole PR at once.
@@ -758,59 +763,60 @@ This is how you can actually validate agent work.
 
 # The Cycle in Practice
 
-<div class="text-sm mt-4">
+<div class="font-mono text-xs bg-neutral-800 p-3 rounded-lg">
 
 ```
-Session 1                     Session 2                     Session 3
-─────────                     ─────────                     ─────────
-fp tree                       fp tree                       fp tree
-  AUTH-001 [done]              AUTH-001 [done]              AUTH-001 [done]
-  AUTH-002 [in-progress]  →    AUTH-002 [done]         →    AUTH-002 [done]
-  AUTH-003 [todo]              AUTH-003 [in-progress]       AUTH-003 [done]
-                               AUTH-004 [todo]              AUTH-004 [in-progress]
-
-Claim → Execute → Review      Claim → Execute → Review      Claim → Execute → Review
+Session 1              Session 2              Session 3
+AUTH-001 [done]        AUTH-001 [done]        AUTH-001 [done]
+AUTH-002 [progress] →  AUTH-002 [done]    →   AUTH-002 [done]
+AUTH-003 [todo]        AUTH-003 [progress]    AUTH-003 [done]
 ```
 
 </div>
 
-<v-clicks>
+<div class="grid grid-cols-3 gap-3 mt-4">
 
-<div class="mt-6 grid grid-cols-3 gap-4">
+<v-click>
 
 <div class="p-3 bg-blue-500/10 rounded-lg text-center text-sm">
 
 **Context preserved**
 
-Agent knows what's done
-
 </div>
+
+</v-click>
+
+<v-click>
 
 <div class="p-3 bg-green-500/10 rounded-lg text-center text-sm">
 
 **Progress visible**
 
-You see exactly where things are
-
 </div>
+
+</v-click>
+
+<v-click>
 
 <div class="p-3 bg-purple-500/10 rounded-lg text-center text-sm">
 
 **Review tractable**
 
-One task at a time
+</div>
+
+</v-click>
 
 </div>
 
+<v-click>
+
+<div class="mt-4 p-3 bg-orange-500/10 rounded-lg text-center text-sm">
+
+Cycle continues across sessions, contexts, and agents
+
 </div>
 
-<div class="mt-6 p-4 bg-orange-500/10 rounded-lg text-center">
-
-**The cycle continues across sessions, contexts, and even different agents**
-
-</div>
-
-</v-clicks>
+</v-click>
 
 <!--
 This is what it looks like in practice. Each session picks up where the last left off.
@@ -834,47 +840,49 @@ So where can you get these benefits? Let's look at the tools that exist today.
 
 # A New Category: Agent-Native
 
-<div class="text-lg mt-4 opacity-80">
+<div class="text-center mt-4 opacity-80">
 
-Task managers designed for AI agents, not retrofitted for them
+Task managers designed for AI agents, not retrofitted
 
 </div>
 
-<v-clicks>
+<div class="grid grid-cols-2 gap-6 mt-6">
 
-<div class="mt-8 grid grid-cols-2 gap-8">
+<v-click>
 
 <div class="p-4 bg-neutral-800 rounded-lg">
 
-### Traditional tools
+### Traditional
 
-- Jira, Linear, Asana
-- Web UIs for humans
-- API access as afterthought
-- Heavy, opinionated
+Jira, Linear · Web UIs · API as afterthought
 
 </div>
+
+</v-click>
+
+<v-click>
 
 <div class="p-4 bg-green-500/10 rounded-lg">
 
-### Agent-native tools
+### Agent-native
 
-- CLI-first interfaces
-- Git-integrated storage
-- Lightweight, focused
-- Built for context loading
+CLI-first · Git-integrated · Context loading
 
 </div>
 
-</div>
-
-<div class="mt-6 text-center text-lg">
-
-**Key insight:** Agents thrive with tools designed for how they work
+</v-click>
 
 </div>
 
-</v-clicks>
+<v-click>
+
+<div class="mt-6 text-center">
+
+**Agents thrive with tools designed for how they work**
+
+</div>
+
+</v-click>
 
 <!--
 This is a new category. These tools aren't adaptations of existing project management software.
@@ -885,45 +893,45 @@ They're purpose-built for agent workflows.
 
 # The Landscape Today
 
-<div class="grid grid-cols-5 gap-4 mt-8 text-center text-sm">
+<div class="grid grid-cols-5 gap-3 mt-6 text-center text-sm">
 
-<div class="p-4 bg-neutral-800 rounded-lg">
-<div class="text-2xl mb-2">🔮</div>
+<div class="p-3 bg-neutral-800 rounded-lg">
+<div class="text-xl mb-1">🔮</div>
 <div class="font-bold">Beads</div>
-<div class="opacity-60 mt-2">Git-based graph</div>
+<div class="opacity-60 text-xs">Git graph</div>
 </div>
 
-<div class="p-4 bg-neutral-800 rounded-lg">
-<div class="text-2xl mb-2">⚡</div>
+<div class="p-3 bg-neutral-800 rounded-lg">
+<div class="text-xl mb-1">⚡</div>
 <div class="font-bold">fp</div>
-<div class="opacity-60 mt-2">Local-first CLI</div>
+<div class="opacity-60 text-xs">Local CLI</div>
 </div>
 
-<div class="p-4 bg-neutral-800 rounded-lg">
-<div class="text-2xl mb-2">📊</div>
+<div class="p-3 bg-neutral-800 rounded-lg">
+<div class="text-xl mb-1">📊</div>
 <div class="font-bold">Vibe Kanban</div>
-<div class="opacity-60 mt-2">Multi-agent</div>
+<div class="opacity-60 text-xs">Multi-agent</div>
 </div>
 
-<div class="p-4 bg-neutral-800 rounded-lg">
-<div class="text-2xl mb-2">📋</div>
+<div class="p-3 bg-neutral-800 rounded-lg">
+<div class="text-xl mb-1">📋</div>
 <div class="font-bold">Taskmaster</div>
-<div class="opacity-60 mt-2">PRD → Tasks</div>
+<div class="opacity-60 text-xs">PRD → Tasks</div>
 </div>
 
-<div class="p-4 bg-neutral-800 rounded-lg">
-<div class="text-2xl mb-2">🫘</div>
+<div class="p-3 bg-neutral-800 rounded-lg">
+<div class="text-xl mb-1">🫘</div>
 <div class="font-bold">Beans</div>
-<div class="opacity-60 mt-2">Flat-file MD</div>
+<div class="opacity-60 text-xs">Flat-file MD</div>
 </div>
 
 </div>
 
 <v-click>
 
-<div class="mt-8 p-4 bg-blue-500/10 rounded-lg text-center">
+<div class="mt-6 p-3 bg-blue-500/10 rounded-lg text-center text-sm">
 
-All open source. All emerging in the last few months. The space is moving fast.
+All open source · All emerged recently · Space moving fast
 
 </div>
 
@@ -938,50 +946,41 @@ Let's look at what makes each one unique.
 
 # Tool Deep Dive
 
-<div class="grid grid-cols-2 gap-6 mt-6 text-sm">
+<div class="grid grid-cols-2 gap-4 mt-4 text-sm">
 
-<div class="p-4 bg-neutral-800 rounded-lg">
+<div class="p-3 bg-neutral-800 rounded-lg">
 
-### 🔮 Beads <span class="opacity-60 text-xs">— Steve Yegge</span>
+### 🔮 Beads <span class="opacity-60 text-xs">— Yegge</span>
 
-- **Storage:** Git-based issue tracker
-- **Superpower:** Dependency-aware graph
-- **Deploy:** Single Go binary
-- **Claim:** Vibe-coded in 6 days
+Git-based · Dependency graph · Go binary
 
 <v-click>
 
-*"50 First Dates" problem coined here*
+*Coined "50 First Dates" problem*
 
 </v-click>
 
 </div>
 
-<div class="p-4 bg-neutral-800 rounded-lg">
+<div class="p-3 bg-neutral-800 rounded-lg">
 
 ### ⚡ fp <span class="opacity-60 text-xs">— fp.dev</span>
 
-- **Storage:** Local-first, per-project
-- **Superpower:** Context loading per session
-- **Deploy:** CLI (`brew install fp`)
-- **Philosophy:** "Shared brain with Claude"
+Local-first · Context loading · CLI
 
 <v-click>
 
-*This talk is built with fp*
+*This talk uses fp*
 
 </v-click>
 
 </div>
 
-<div class="p-4 bg-neutral-800 rounded-lg">
+<div class="p-3 bg-neutral-800 rounded-lg">
 
 ### 📊 Vibe Kanban <span class="opacity-60 text-xs">— BloopAI</span>
 
-- **Storage:** Git worktrees
-- **Superpower:** Multi-agent orchestration
-- **Deploy:** MCP server + visual board
-- **Killer feature:** Per-task diffs
+Git worktrees · Multi-agent · Per-task diffs
 
 <v-click>
 
@@ -991,18 +990,15 @@ Let's look at what makes each one unique.
 
 </div>
 
-<div class="p-4 bg-neutral-800 rounded-lg">
+<div class="p-3 bg-neutral-800 rounded-lg">
 
-### 📋 Taskmaster <span class="opacity-60 text-xs">— Eyal Toledano</span>
+### 📋 Taskmaster <span class="opacity-60 text-xs">— Toledano</span>
 
-- **Storage:** JSON task files
-- **Superpower:** PRD parsing → tasks
-- **Deploy:** MCP integration
-- **Fits:** Cursor, Windsurf, etc.
+JSON files · PRD → tasks · MCP
 
 <v-click>
 
-*From spec to tasks automatically*
+*Spec to tasks automatically*
 
 </v-click>
 
@@ -1019,36 +1015,33 @@ Beads is graph-first. fp is CLI-first. Vibe Kanban is visual. Taskmaster starts 
 
 # Tool Deep Dive (cont.)
 
-<div class="grid grid-cols-2 gap-8 mt-8">
+<div class="grid grid-cols-2 gap-4 mt-4">
 
-<div class="p-4 bg-neutral-800 rounded-lg">
+<div class="p-3 bg-neutral-800 rounded-lg">
 
-### 🫘 Beans <span class="opacity-60 text-xs">— Hendrik Mans</span>
+### 🫘 Beans <span class="opacity-60 text-xs">— Mans</span>
 
-- **Storage:** Flat-file markdown in `.beans/`
-- **Superpower:** GraphQL query engine (token efficient)
-- **Deploy:** CLI + TUI interface
-- **Philosophy:** Human-readable, agent-queryable
+Flat-file MD · GraphQL queries · TUI
 
 <v-click>
 
-*Markdown files that don't go stale*
+*Token-efficient, human-readable*
 
 </v-click>
 
 </div>
 
-<div v-click class="p-4 bg-blue-500/10 rounded-lg">
+<div v-click class="p-3 bg-blue-500/10 rounded-lg text-sm">
 
-### Pick based on your workflow
+### Pick by workflow
 
-| If you need... | Try... |
-|---------------|--------|
+| Need | Tool |
+|------|------|
 | Dependency graphs | Beads |
-| CLI + context loading | fp |
-| Visual + multi-agent | Vibe Kanban |
+| CLI + context | fp |
+| Multi-agent | Vibe Kanban |
 | PRD → tasks | Taskmaster |
-| Token-efficient queries | Beans |
+| Token-efficient | Beans |
 
 </div>
 
@@ -1056,9 +1049,9 @@ Beads is graph-first. fp is CLI-first. Vibe Kanban is visual. Taskmaster starts 
 
 <v-click>
 
-<div class="mt-6 p-4 bg-orange-500/10 rounded-lg text-center">
+<div class="mt-4 p-3 bg-orange-500/10 rounded-lg text-center text-sm">
 
-**No "best" tool.** Pick what fits how you work. They all solve the core problem: persistent agent memory.
+**No "best" tool.** All solve the core problem: persistent agent memory.
 
 </div>
 
@@ -1085,45 +1078,35 @@ Let's wrap up with the core insight from today.
 
 # A Task Manager Is a Shared Brain
 
-<div class="grid grid-cols-2 gap-8 mt-8">
+<div class="grid grid-cols-2 gap-6 mt-6">
 
-<div>
+<div class="p-4 bg-neutral-800 rounded-lg">
 
-### What developers already do
+### What you already do
 
-<v-clicks>
-
-- Keep scratch notes while coding
-- Track TODOs in your head
-- Remember context between sessions
-- Know what's next
-
-</v-clicks>
-
-</div>
-
-<div v-click>
-
-### What agents can't do (alone)
-
-<v-clicks>
-
-- Remember across context windows
-- Know what you decided yesterday
-- See the bigger picture
-- Track their own progress
-
-</v-clicks>
-
-</div>
+Scratch notes · Mental TODOs · Session context
 
 </div>
 
 <v-click>
 
-<div class="mt-8 p-6 bg-blue-500/20 rounded-lg text-center text-xl">
+<div class="p-4 bg-neutral-800 rounded-lg">
 
-**A task manager lets you share those notes with Claude**
+### What agents can't (alone)
+
+Remember across windows · See the big picture
+
+</div>
+
+</v-click>
+
+</div>
+
+<v-click>
+
+<div class="mt-6 p-5 bg-blue-500/20 rounded-lg text-center text-lg">
+
+**A task manager lets you share notes with Claude**
 
 Persistent · Structured · Collaborative
 
@@ -1140,51 +1123,51 @@ It's not about managing the agent - it's about thinking together.
 
 # Get Started
 
-<div class="text-lg mt-4 opacity-80 text-center">
+<div class="text-center mt-4 opacity-80">
 
-Try one of these tools on your next project — start small, even just tracking tasks helps
+Pick one and try it on your next project
 
 </div>
 
-<div class="grid grid-cols-5 gap-4 mt-8 text-center text-sm">
+<div class="grid grid-cols-5 gap-3 mt-6 text-center text-xs">
 
-<a href="https://fp.dev" target="_blank" class="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition no-underline">
-<div class="text-2xl mb-2">⚡</div>
+<a href="https://fp.dev" target="_blank" class="p-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition no-underline">
+<div class="text-xl mb-1">⚡</div>
 <div class="font-bold">fp</div>
-<div class="opacity-60 mt-1 text-xs">fp.dev</div>
+<div class="opacity-60">fp.dev</div>
 </a>
 
-<a href="https://github.com/steveyegge/beads" target="_blank" class="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition no-underline">
-<div class="text-2xl mb-2">🔮</div>
+<a href="https://github.com/steveyegge/beads" target="_blank" class="p-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition no-underline">
+<div class="text-xl mb-1">🔮</div>
 <div class="font-bold">Beads</div>
-<div class="opacity-60 mt-1 text-xs">steveyegge/beads</div>
+<div class="opacity-60">steveyegge/beads</div>
 </a>
 
-<a href="https://github.com/BloopAI/vibe-kanban" target="_blank" class="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition no-underline">
-<div class="text-2xl mb-2">📊</div>
+<a href="https://github.com/BloopAI/vibe-kanban" target="_blank" class="p-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition no-underline">
+<div class="text-xl mb-1">📊</div>
 <div class="font-bold">Vibe Kanban</div>
-<div class="opacity-60 mt-1 text-xs">BloopAI/vibe-kanban</div>
+<div class="opacity-60">BloopAI/vibe-kanban</div>
 </a>
 
-<a href="https://github.com/eyaltoledano/claude-task-master" target="_blank" class="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition no-underline">
-<div class="text-2xl mb-2">📋</div>
+<a href="https://github.com/eyaltoledano/claude-task-master" target="_blank" class="p-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition no-underline">
+<div class="text-xl mb-1">📋</div>
 <div class="font-bold">Taskmaster</div>
-<div class="opacity-60 mt-1 text-xs">eyaltoledano/claude-task-master</div>
+<div class="opacity-60">claude-task-master</div>
 </a>
 
-<a href="https://github.com/hmans/beans" target="_blank" class="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition no-underline">
-<div class="text-2xl mb-2">🫘</div>
+<a href="https://github.com/hmans/beans" target="_blank" class="p-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition no-underline">
+<div class="text-xl mb-1">🫘</div>
 <div class="font-bold">Beans</div>
-<div class="opacity-60 mt-1 text-xs">hmans/beans</div>
+<div class="opacity-60">hmans/beans</div>
 </a>
 
 </div>
 
 <v-click>
 
-<div class="mt-8 p-4 bg-green-500/10 rounded-lg text-center">
+<div class="mt-6 p-3 bg-green-500/10 rounded-lg text-center">
 
-**All open source. All free. Pick one and try it today.**
+**All open source. All free.**
 
 </div>
 
@@ -1203,25 +1186,17 @@ layout: center
 
 # Thank You
 
-<div class="mt-8 text-2xl">
+<div class="mt-6 text-xl">
 
-**Brett Beutell**
-
-</div>
-
-<div class="mt-4 text-lg opacity-80">
-
-@bbeutell
+**Brett Beutell** · @bbeutell
 
 </div>
 
 <v-click>
 
-<div class="mt-12 p-4 bg-neutral-800 rounded-lg inline-block text-sm">
+<div class="mt-10 p-4 bg-neutral-800 rounded-lg inline-block text-sm opacity-80">
 
-*This presentation was built by a Claude Code agent*
-
-*tracking its own work with fp*
+*Built by Claude Code, tracked with fp*
 
 </div>
 
