@@ -33,9 +33,9 @@ Welcome everyone! Today I want to show you something a bit different...
 
 <div class="text-xl opacity-80 leading-relaxed max-w-2xl mx-auto">
 
-"If you ask Claude to build a tool for itself to be more effective,
+If you ask Claude to build a tool for itself to be more effective,
 
-you will end up with a **task manager**."
+you will end up with a **task manager**.
 
 </div>
 
