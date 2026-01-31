@@ -19,7 +19,7 @@ mdc: true
 From chaos to clarity in agent workflows
 
 <div class="abs-br m-6 text-sm opacity-60">
-Brett Beutell · @bbeutell
+Brett Beutell · @lastgoodhandle
 </div>
 
 <!--
@@ -399,6 +399,56 @@ We just need tools designed for agent workflows, not human workflows.
 <div class="p-3 bg-purple-500/10 rounded-lg">Plan → Execute → Review</div>
 
 </div>
+
+---
+
+# About Me
+
+<div class="grid grid-cols-2 gap-8 mt-6">
+
+<div class="flex flex-col justify-center">
+
+<div class="text-2xl font-semibold mb-2">Brett Beutell</div>
+
+<div class="text-lg opacity-80 mb-6">Developer @ Fiberplane · Amsterdam</div>
+
+<div class="space-y-3 text-sm">
+
+<div class="flex items-center gap-3">
+<span class="text-lg">𝕏</span>
+<a href="https://twitter.com/lastgoodhandle" target="_blank">@lastgoodhandle</a>
+</div>
+
+<div class="flex items-center gap-3">
+<span class="text-lg">⌂</span>
+<a href="https://github.com/brettimus" target="_blank">@brettimus</a>
+</div>
+
+<div class="flex items-center gap-3">
+<span class="text-lg">in</span>
+<a href="https://linkedin.com/in/brettbeutell" target="_blank">in/brettbeutell</a>
+</div>
+
+</div>
+
+</div>
+
+<div class="flex items-center justify-center">
+
+<div class="p-6 bg-neutral-800 rounded-xl text-center">
+<div class="text-4xl mb-3">⚡</div>
+<div class="text-xl font-semibold mb-1">Fiberplane</div>
+<div class="text-sm opacity-70">fp.dev</div>
+</div>
+
+</div>
+
+</div>
+
+<!--
+I'm Brett, I work at Fiberplane. We built fp, the task manager you've been seeing throughout this talk.
+I'm happy to chat about agent workflows after - find me on Twitter or GitHub.
+-->
 
 ---
 layout: section
@@ -1186,9 +1236,25 @@ layout: center
 
 # Thank You
 
-<div class="mt-6 text-xl">
+<div class="mt-6 text-lg">
 
-**Brett Beutell** · @bbeutell
+**Brett Beutell** · Developer @ Fiberplane · Amsterdam
+
+</div>
+
+<div class="flex justify-center gap-6 mt-6 text-sm">
+
+<a href="https://twitter.com/lastgoodhandle" target="_blank" class="flex items-center gap-2 opacity-70 hover:opacity-100 no-underline">
+<span>𝕏</span> @lastgoodhandle
+</a>
+
+<a href="https://github.com/brettimus" target="_blank" class="flex items-center gap-2 opacity-70 hover:opacity-100 no-underline">
+<span>⌂</span> @brettimus
+</a>
+
+<a href="https://linkedin.com/in/brettbeutell" target="_blank" class="flex items-center gap-2 opacity-70 hover:opacity-100 no-underline">
+<span>in</span> brettbeutell
+</a>
 
 </div>
 
