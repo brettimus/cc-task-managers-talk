@@ -1,6 +1,6 @@
 ---
 theme: default
-title: Task Managers for Claude Code
+title: Claude Really Wants a Task Manager
 info: |
   A talk about agent-native task management tools
   and how they improve AI coding workflows.
@@ -15,7 +15,7 @@ mdc: true
 @import './style.css';
 </style>
 
-# Task Managers for Claude Code
+# Claude *Really* Wants a Task Manager
 
 From chaos to clarity in agent workflows
 
