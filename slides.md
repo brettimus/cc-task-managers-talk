@@ -440,3 +440,86 @@ This is where task managers start to help
 This is genuinely an open problem. But the insight is: review by task, not by PR.
 That's what task managers enable.
 -->
+
+---
+layout: section
+---
+
+# What Task Managers Solve
+
+The core capabilities that address these pain points
+
+<!--
+Now let's look at what task managers actually provide.
+-->
+
+---
+
+# Four Key Capabilities
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<v-click>
+
+<div class="p-4 bg-blue-500/10 rounded-lg">
+
+### External plan storage
+
+Plans and sub-tasks live outside the context window
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="p-4 bg-green-500/10 rounded-lg">
+
+### Exploration docs
+
+Document what you tried - including failures
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="p-4 bg-purple-500/10 rounded-lg">
+
+### Clean context resets
+
+Clear window, load next task's context
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="p-4 bg-orange-500/10 rounded-lg">
+
+### Intent-to-code linking
+
+Natural language intent tied to commits
+
+</div>
+
+</v-click>
+
+</div>
+
+<v-click>
+
+<div class="mt-6 text-center text-lg">
+
+**These capabilities work together to create persistent, structured memory**
+
+</div>
+
+</v-click>
+
+<!--
+Four capabilities that matter. External storage, exploration docs, clean resets, and intent linking.
+Together they give your agent a memory that survives context windows.
+-->
