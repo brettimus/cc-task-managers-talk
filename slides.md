@@ -71,7 +71,7 @@ Let's talk about what's broken. Because if you've used Claude Code for any serio
 
 ---
 
-# The "50 First Dates" Problem
+# Session Amnesia
 
 <div class="text-xl mt-6 opacity-80 italic">
 "Every morning, your AI wakes up with no memory of yesterday."
@@ -85,15 +85,15 @@ Let's talk about what's broken. Because if you've used Claude Code for any serio
 
 <div class="p-4 bg-neutral-800 rounded-lg">
 
-- New context window = clean slate
-- Yesterday's progress? Gone
-- Your coding preferences? Re-explain
+- Context windows start fresh every time
+- Dead ends from previous sessions? Invisible
+- Big picture goals need constant refreshing
 
 </div>
 
 <div class="p-4 bg-orange-500/10 rounded-lg">
 
-**The irony:** Great work was happening. Then the session ended.
+**The fix:** Scattered markdown files... that go stale immediately.
 
 </div>
 
@@ -102,8 +102,8 @@ Let's talk about what's broken. Because if you've used Claude Code for any serio
 </v-clicks>
 
 <!--
-Steve Yegge coined this analogy - like the movie 50 First Dates where Drew Barrymore's character has no memory of previous days.
-Every session starts from scratch.
+Steve Yegge coined this phrase. Every session starts from scratch.
+You need a way to load relevant context - but ad-hoc markdown files aren't it.
 -->
 
 ---
@@ -951,7 +951,7 @@ Git-based · Dependency graph · Go binary
 
 <v-click>
 
-*Coined "50 First Dates" problem*
+*Coined "session amnesia" phrase*
 
 </v-click>
 
