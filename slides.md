@@ -523,3 +523,125 @@ Natural language intent tied to commits
 Four capabilities that matter. External storage, exploration docs, clean resets, and intent linking.
 Together they give your agent a memory that survives context windows.
 -->
+
+---
+layout: section
+---
+
+# What Solutions Exist
+
+From built-in to purpose-built
+
+<!--
+Let's look at what's out there for agent-native task management.
+-->
+
+---
+
+# The Landscape
+
+<div class="grid grid-cols-2 gap-6 mt-4">
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+### Claude Code (built-in)
+
+<v-click>
+
+**Pros:** Works out of the box, no plugins
+
+</v-click>
+
+<v-click>
+
+**Cons:** No persistence across sessions, no visualization
+
+</v-click>
+
+</div>
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+### Beads
+
+<v-click>
+
+**Pros:** External storage, sync, Claude uses it well
+
+</v-click>
+
+<v-click>
+
+**Cons:** Wild west integration, bring your own review tools
+
+</v-click>
+
+</div>
+
+</div>
+
+<!--
+Two ends of the spectrum: built-in TodoWrite vs external tools like Beads.
+Both have tradeoffs.
+-->
+
+---
+
+# More Options
+
+<div class="grid grid-cols-2 gap-6 mt-4">
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+### fp
+
+<v-click>
+
+**Pros:** External storage + integrated review tooling
+
+</v-click>
+
+<v-click>
+
+**Cons:** Smaller community, cloud sync requires account
+
+</v-click>
+
+</div>
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+### Others
+
+<v-click>
+
+- **Taskmaster** - PRD to tasks
+- **Vibe Kanban** - Multi-agent, per-task diffs
+- **Beans** - Flat-file, token-efficient
+
+</v-click>
+
+<v-click>
+
+*Many more emerging weekly*
+
+</v-click>
+
+</div>
+
+</div>
+
+<v-click>
+
+<div class="mt-6 p-4 bg-blue-500/10 rounded-lg text-center">
+
+**No "best" tool - they all solve the core problem differently**
+
+</div>
+
+</v-click>
+
+<!--
+fp is what I use (disclaimer: I work on it). But there are many good options.
+The space is evolving rapidly.
+-->
