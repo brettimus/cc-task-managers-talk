@@ -31,16 +31,12 @@ Welcome everyone! Today I want to show you something a bit different...
 
 # This Talk Is a Demo
 
-<div class="mt-4 font-mono text-sm bg-neutral-800 p-4 rounded-lg">
-
-```
-CCTA-vojsagkz [in-progress] Meta demo opening
-CCTA-fogpceik [todo]        Plan → Execute → Review slides
-CCTA-pqcfzgfs [todo]        Agent-native task managers
-CCTA-bulmdiry [done]        Initialize Slidev + Bun
-```
-
-</div>
+<TerminalOutput title="fp tree">
+  <TaskLine id="CCTA-vojsagkz" status="in-progress">Meta demo opening</TaskLine>
+  <TaskLine id="CCTA-fogpceik" status="todo">Plan → Execute → Review slides</TaskLine>
+  <TaskLine id="CCTA-pqcfzgfs" status="todo">Agent-native task managers</TaskLine>
+  <TaskLine id="CCTA-bulmdiry" status="done">Initialize Slidev + Bun</TaskLine>
+</TerminalOutput>
 
 <v-click>
 
