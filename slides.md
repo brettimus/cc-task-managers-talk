@@ -45,7 +45,7 @@ you will end up with a **task manager**.
 
 <div class="mt-12 text-center opacity-60">
 
-Let me show you why.
+Let's find out why.
 
 </div>
 
