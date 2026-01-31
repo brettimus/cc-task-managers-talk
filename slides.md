@@ -4,6 +4,7 @@ title: Task Managers for Claude Code
 info: |
   A talk about agent-native task management tools
   and how they improve AI coding workflows.
+favicon: https://fav.farm/🤖
 drawings:
   persist: false
 transition: slide-left
