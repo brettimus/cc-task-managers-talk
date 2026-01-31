@@ -78,7 +78,7 @@ It's not a coincidence - it's a necessity.
 </div>
 
 <div class="flex items-center gap-3">
-<span class="text-lg">⌂</span>
+<mdi-github class="text-lg" />
 <a href="https://github.com/brettimus" target="_blank">@brettimus</a>
 </div>
 
@@ -1229,7 +1229,7 @@ layout: center
 </a>
 
 <a href="https://github.com/brettimus" target="_blank" class="flex items-center gap-2 opacity-70 hover:opacity-100 no-underline">
-<span>⌂</span> @brettimus
+<mdi-github /> @brettimus
 </a>
 
 <a href="https://linkedin.com/in/brettbeutell" target="_blank" class="flex items-center gap-2 opacity-70 hover:opacity-100 no-underline">
