@@ -309,3 +309,134 @@ They work, to a point.
 The core problem: these ad-hoc solutions don't scale.
 They clutter your repo and still lose information.
 -->
+
+---
+layout: section
+---
+
+# Pain Point 2
+
+Reviewing massive Claude PRs is hard
+
+<!--
+The second problem hits when you need to verify what Claude actually built.
+-->
+
+---
+
+# Claude Makes Mistakes
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<v-click>
+
+<div class="p-4 bg-red-500/10 rounded-lg">
+
+### Common issues
+
+- Doesn't delete dead code
+- Creates unnecessary abstractions
+- Cheats on tests (mocks everything)
+- Misunderstands requirements
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+### The review wall
+
+Most tools show a wall of diffs
+
+```diff
++ 47 files changed
++ 2,341 insertions
++ 891 deletions
+```
+
+Good luck finding the bug.
+
+</div>
+
+</v-click>
+
+</div>
+
+<v-click>
+
+<div class="mt-6 p-4 bg-orange-500/10 rounded-lg text-center">
+
+**You can't trust agent code you can't review**
+
+</div>
+
+</v-click>
+
+<!--
+Claude is good but not perfect. The problem is validating what it produced.
+When you're staring at 47 changed files, how do you know what to check?
+-->
+
+---
+
+# An Open Problem
+
+<div class="mt-8 text-center">
+
+<div class="text-xl opacity-80 mb-8">
+
+No one has cracked this yet... but progress is happening
+
+</div>
+
+</div>
+
+<div class="grid grid-cols-2 gap-6">
+
+<v-click>
+
+<div class="p-4 bg-blue-500/10 rounded-lg">
+
+### Narrative-based review
+
+- Devin-style PR summaries
+- Per-task diffs (fp, Vibe Kanban)
+- Stories, not just code
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="p-4 bg-purple-500/10 rounded-lg">
+
+### Structured commits
+
+- Link commits to tasks
+- Review by intention
+- Trace reasoning
+
+</div>
+
+</v-click>
+
+</div>
+
+<v-click>
+
+<div class="mt-6 text-center opacity-70">
+
+This is where task managers start to help
+
+</div>
+
+</v-click>
+
+<!--
+This is genuinely an open problem. But the insight is: review by task, not by PR.
+That's what task managers enable.
+-->
