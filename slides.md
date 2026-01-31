@@ -107,7 +107,7 @@ I'm Brett, I work at Fiberplane. We built fp, the task manager I'll be showing y
 
 ---
 
-# This Talk Is a Demo
+# Meta Demo
 
 <TerminalOutput title="fp tree">
   <TaskLine id="CCTA-vojsagkz" status="in-progress">Meta demo opening</TaskLine>
