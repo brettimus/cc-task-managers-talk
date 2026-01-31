@@ -27,7 +27,7 @@ Welcome everyone! Today I want to show you something a bit different...
 
 ---
 
-# The Premise
+# What Would Claude Build?
 
 <div class="text-center mt-12">
 
@@ -52,7 +52,7 @@ Let's find out why.
 </v-click>
 
 <!--
-This is the thesis of the talk. When Claude builds tools to improve its own workflow, task management always emerges.
+What would Claude build for itself? Task management. Every time.
 It's not a coincidence - it's a necessity.
 -->
 
