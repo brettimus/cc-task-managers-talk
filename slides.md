@@ -17,8 +17,6 @@ mdc: true
 
 # Claude *Really* Wants a Task Manager
 
-From chaos to clarity in agent workflows
-
 <div class="abs-br m-6 text-sm">
 Brett Beutell · @lastgoodhandle
 </div>
