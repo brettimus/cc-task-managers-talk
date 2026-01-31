@@ -19,7 +19,7 @@ mdc: true
 
 From chaos to clarity in agent workflows
 
-<div class="abs-br m-6 text-sm opacity-60">
+<div class="abs-br m-6 text-sm">
 Brett Beutell · @lastgoodhandle
 </div>
 
