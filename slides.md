@@ -1209,6 +1209,10 @@ layout: center
 
 *Built by Claude Code, tracked with fp*
 
+<a href="https://github.com/brettimus/cc-task-managers-talk" target="_blank" class="block mt-2 opacity-70 hover:opacity-100 no-underline">
+View the code →
+</a>
+
 </div>
 
 </v-click>
