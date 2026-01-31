@@ -130,3 +130,182 @@ I'm Brett, I work at Fiberplane. We built fp, the task manager I'll be showing y
 This is actual output from fp tree, right now.
 I'm not just talking about task managers - I'm using one to build this talk.
 -->
+
+---
+layout: section
+---
+
+# Pain Point 1
+
+Ambitious work requires multiple Claude Code sessions
+
+<!--
+Let's start with the first problem you'll hit when doing real work with Claude Code.
+-->
+
+---
+
+# Why Multiple Sessions?
+
+<div class="grid grid-cols-3 gap-4 mt-6">
+
+<v-click>
+
+<div class="p-4 bg-neutral-800 rounded-lg text-center">
+
+**Context is finite**
+
+Performance degrades as you add more
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="p-4 bg-neutral-800 rounded-lg text-center">
+
+**Compaction isn't great**
+
+Getting better, but lossy
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="p-4 bg-neutral-800 rounded-lg text-center">
+
+**Wrong turns happen**
+
+Dead ends deserve documentation
+
+</div>
+
+</v-click>
+
+</div>
+
+<v-click>
+
+<div class="mt-8 p-4 bg-orange-500/10 rounded-lg text-center">
+
+**Any ambitious project spans multiple sessions**
+
+</div>
+
+</v-click>
+
+<!--
+Context windows are finite. Eventually you need to start fresh.
+But how do you carry forward what you learned?
+-->
+
+---
+
+# Current Solutions
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+### SPEC files
+
+Track goals across sessions
+
+```
+SPEC.md
+├── Goals
+├── Architecture decisions
+└── Current status
+```
+
+</div>
+
+<v-click>
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+### Dev logs
+
+Record design decisions and reasoning
+
+```
+DEV_LOG.md
+├── 2024-01-15: Tried X, failed
+├── 2024-01-16: Approach Y works
+└── 2024-01-17: Refactored Z
+```
+
+</div>
+
+</v-click>
+
+</div>
+
+<v-click>
+
+<div class="mt-6 text-center opacity-70">
+
+These help... but they're not quite right
+
+</div>
+
+</v-click>
+
+<!--
+People have invented solutions. SPEC files, dev logs, context docs.
+They work, to a point.
+-->
+
+---
+
+# The Problems
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<v-click>
+
+<div class="p-4 bg-red-500/10 rounded-lg">
+
+### Codebase clutter
+
+- SPEC.md, PLAN.md, TODO.md, DEV_LOG.md
+- Which one is current?
+- Do you commit them?
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="p-4 bg-red-500/10 rounded-lg">
+
+### Lost explorations
+
+- Failed approaches don't survive squash
+- "Why didn't we do X?" - no record
+- Reasoning evaporates
+
+</div>
+
+</v-click>
+
+</div>
+
+<v-click>
+
+<div class="mt-6 p-4 bg-yellow-500/10 rounded-lg text-center">
+
+**We need structured persistence, not scattered docs**
+
+</div>
+
+</v-click>
+
+<!--
+The core problem: these ad-hoc solutions don't scale.
+They clutter your repo and still lose information.
+-->
