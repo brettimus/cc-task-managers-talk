@@ -347,3 +347,168 @@
 .slidev-layout a.no-underline {
   text-decoration: none;
 }
+
+/* ================================================
+   Terminal Output Component Styles
+   ================================================ */
+
+/* File tree styling (Markdown Litter slide) */
+.file-tree {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.tree-line {
+  color: var(--neutral-300);
+}
+
+.tree-line .dir {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.tree-line .file {
+  color: var(--neutral-200);
+}
+
+.tree-line .stale {
+  color: var(--neutral-600);
+  font-style: italic;
+  margin-left: 0.5rem;
+}
+
+/* Git log styling (PR Review Problem slide) */
+.git-log {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.log-line {
+  color: var(--neutral-300);
+}
+
+.log-count {
+  color: var(--neutral-400);
+  font-weight: 500;
+}
+
+.log-hash {
+  color: var(--warning);
+}
+
+.log-type {
+  font-weight: 500;
+}
+
+.log-type.feat {
+  color: oklch(0.65 0.20 155); /* green */
+}
+
+.log-type.fix {
+  color: oklch(0.60 0.22 25); /* red/danger */
+}
+
+.log-type.refactor {
+  color: var(--primary);
+}
+
+/* Bash command styling (PLAN, EXECUTE slides) */
+.bash-cmd {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: var(--neutral-200);
+}
+
+.bash-cmd .prompt {
+  color: oklch(0.65 0.20 155); /* green */
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.bash-cmd .comment {
+  color: var(--neutral-600);
+  font-style: italic;
+}
+
+.cmd-indent {
+  padding-left: 1.25rem;
+  color: var(--neutral-300);
+}
+
+/* fp diff styling (REVIEW slide) */
+.fp-diff {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.fp-diff .prompt {
+  color: oklch(0.65 0.20 155);
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.diff-header {
+  color: var(--neutral-400);
+  margin-top: 0.5rem;
+}
+
+.diff-id {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.diff-count {
+  color: var(--warning);
+  font-weight: 500;
+}
+
+.diff-files {
+  margin-top: 0.75rem;
+}
+
+.diff-line {
+  color: var(--neutral-300);
+}
+
+.diff-file {
+  color: var(--neutral-200);
+}
+
+.diff-add {
+  color: oklch(0.65 0.20 155); /* green */
+}
+
+/* Session grid (The Cycle in Practice slide) */
+.session-grid {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.session-col {
+  flex: 1;
+}
+
+.session-header {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--neutral-400);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.session-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-top: 3rem;
+}

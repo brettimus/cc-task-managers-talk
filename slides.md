@@ -297,18 +297,16 @@ Neither of you remember exactly what was decided.
 
 <div class="grid grid-cols-2 gap-6 mt-6">
 
-<div class="font-mono text-xs bg-neutral-800 p-4 rounded-lg">
-
-```
-project/
-├── TODO.md        (3 weeks ago)
-├── PLAN.md        (stale)
-├── NOTES.md       (who wrote this?)
-├── .claude/TODO.md (another one?)
-└── docs/ROADMAP.md (outdated)
-```
-
-</div>
+<TerminalOutput title="ls -la">
+  <div class="file-tree">
+    <div class="tree-line"><span class="dir">project/</span></div>
+    <div class="tree-line">├── <span class="file">TODO.md</span> <span class="stale">(3 weeks ago)</span></div>
+    <div class="tree-line">├── <span class="file">PLAN.md</span> <span class="stale">(stale)</span></div>
+    <div class="tree-line">├── <span class="file">NOTES.md</span> <span class="stale">(who wrote this?)</span></div>
+    <div class="tree-line">├── <span class="dir">.claude/</span><span class="file">TODO.md</span> <span class="stale">(another one?)</span></div>
+    <div class="tree-line">└── <span class="dir">docs/</span><span class="file">ROADMAP.md</span> <span class="stale">(outdated)</span></div>
+  </div>
+</TerminalOutput>
 
 <v-click>
 
@@ -346,19 +344,17 @@ The agent is trying to help! But without a real system, these files just become 
 
 <div class="grid grid-cols-2 gap-6 mt-6">
 
-<div class="font-mono text-xs bg-neutral-800 p-4 rounded-lg">
-
-```
-47 commits:
-feat: add user model
-feat: add validation
-fix: edge case
-refactor: helper
-feat: tests
-fix: test wrong...
-```
-
-</div>
+<TerminalOutput title="git log --oneline">
+  <div class="git-log">
+    <div class="log-line"><span class="log-count">47 commits:</span></div>
+    <div class="log-line"><span class="log-hash">a1b2c3d</span> <span class="log-type feat">feat:</span> add user model</div>
+    <div class="log-line"><span class="log-hash">e4f5g6h</span> <span class="log-type feat">feat:</span> add validation</div>
+    <div class="log-line"><span class="log-hash">i7j8k9l</span> <span class="log-type fix">fix:</span> edge case</div>
+    <div class="log-line"><span class="log-hash">m0n1o2p</span> <span class="log-type refactor">refactor:</span> helper</div>
+    <div class="log-line"><span class="log-hash">q3r4s5t</span> <span class="log-type feat">feat:</span> tests</div>
+    <div class="log-line"><span class="log-hash">u6v7w8x</span> <span class="log-type fix">fix:</span> test wrong...</div>
+  </div>
+</TerminalOutput>
 
 <div v-click class="p-4 bg-neutral-800 rounded-lg">
 
@@ -513,15 +509,13 @@ Each phase feeds into the next. Let's look at each one.
 
 </div>
 
-<div class="p-4 bg-neutral-800 rounded-lg">
-
-```bash
-fp issue create \
-  --title "Auth middleware" \
-  --parent EPIC-123
-```
-
-</div>
+<TerminalOutput title="bash">
+  <div class="bash-cmd">
+    <span class="prompt">$</span> fp issue create \
+    <div class="cmd-indent">--title "Auth middleware" \</div>
+    <div class="cmd-indent">--parent EPIC-123</div>
+  </div>
+</TerminalOutput>
 
 </div>
 
@@ -598,16 +592,14 @@ Your scratch notes become shared context.
 
 </div>
 
-<div class="p-4 bg-neutral-800 rounded-lg text-sm">
-
-```bash
-fp issue update --status in-progress ID
-fp context ID  # Load everything
-git commit -m "feat(ID): ..."
-fp comment ID "progress..."
-```
-
-</div>
+<TerminalOutput title="bash">
+  <div class="bash-cmd">
+    <div><span class="prompt">$</span> fp issue update --status in-progress ID</div>
+    <div><span class="prompt">$</span> fp context ID  <span class="comment"># Load everything</span></div>
+    <div><span class="prompt">$</span> git commit -m "feat(ID): ..."</div>
+    <div><span class="prompt">$</span> fp comment ID "progress..."</div>
+  </div>
+</TerminalOutput>
 
 </div>
 
@@ -726,19 +718,18 @@ The solution is reviewing in smaller chunks, tied to tasks, with context preserv
 
 # REVIEW: Per-Task Diffs
 
-<div class="font-mono text-xs bg-neutral-800 p-4 rounded-lg">
-
-```bash
-$ fp issue diff AUTH-002
-Showing: AUTH-002 (Implement refresh tokens)
-Commits: 3
-
-src/auth/refresh.ts        | 47 +++++++++++
-src/auth/middleware.ts     | 12 +++
-tests/auth/refresh.test.ts | 38 +++++++++
-```
-
-</div>
+<TerminalOutput title="fp issue diff">
+  <div class="fp-diff">
+    <div><span class="prompt">$</span> fp issue diff AUTH-002</div>
+    <div class="diff-header">Showing: <span class="diff-id">AUTH-002</span> (Implement refresh tokens)</div>
+    <div class="diff-header">Commits: <span class="diff-count">3</span></div>
+    <div class="diff-files">
+      <div class="diff-line"><span class="diff-file">src/auth/refresh.ts</span>        | <span class="diff-add">47 +++++++++++</span></div>
+      <div class="diff-line"><span class="diff-file">src/auth/middleware.ts</span>     | <span class="diff-add">12 +++</span></div>
+      <div class="diff-line"><span class="diff-file">tests/auth/refresh.test.ts</span> | <span class="diff-add">38 +++++++++</span></div>
+    </div>
+  </div>
+</TerminalOutput>
 
 <div class="grid grid-cols-2 gap-4 mt-4">
 
@@ -784,15 +775,33 @@ This is how you can actually validate agent work.
 
 # The Cycle in Practice
 
-<div class="font-mono text-xs bg-neutral-800 p-3 rounded-lg">
-
-```
-Session 1              Session 2              Session 3
-AUTH-001 [done]        AUTH-001 [done]        AUTH-001 [done]
-AUTH-002 [progress] →  AUTH-002 [done]    →   AUTH-002 [done]
-AUTH-003 [todo]        AUTH-003 [progress]    AUTH-003 [done]
-```
-
+<div class="session-grid">
+  <div class="session-col">
+    <div class="session-header">Session 1</div>
+    <TerminalOutput title="fp tree">
+      <TaskLine id="AUTH-001" status="done">User login</TaskLine>
+      <TaskLine id="AUTH-002" status="in-progress">Refresh tokens</TaskLine>
+      <TaskLine id="AUTH-003" status="todo">Logout flow</TaskLine>
+    </TerminalOutput>
+  </div>
+  <div class="session-arrow">→</div>
+  <div class="session-col">
+    <div class="session-header">Session 2</div>
+    <TerminalOutput title="fp tree">
+      <TaskLine id="AUTH-001" status="done">User login</TaskLine>
+      <TaskLine id="AUTH-002" status="done">Refresh tokens</TaskLine>
+      <TaskLine id="AUTH-003" status="in-progress">Logout flow</TaskLine>
+    </TerminalOutput>
+  </div>
+  <div class="session-arrow">→</div>
+  <div class="session-col">
+    <div class="session-header">Session 3</div>
+    <TerminalOutput title="fp tree">
+      <TaskLine id="AUTH-001" status="done">User login</TaskLine>
+      <TaskLine id="AUTH-002" status="done">Refresh tokens</TaskLine>
+      <TaskLine id="AUTH-003" status="done">Logout flow</TaskLine>
+    </TerminalOutput>
+  </div>
 </div>
 
 <div class="grid grid-cols-3 gap-3 mt-4">
