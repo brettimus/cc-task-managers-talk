@@ -645,3 +645,133 @@ Both have tradeoffs.
 fp is what I use (disclaimer: I work on it). But there are many good options.
 The space is evolving rapidly.
 -->
+
+---
+layout: section
+---
+
+# Which Should You Use?
+
+<!--
+The million dollar question.
+-->
+
+---
+
+# Explore What's Out There
+
+<div class="mt-8 text-center">
+
+<div class="text-xl opacity-80 mb-8">
+
+There's no "best" tool - find what fits your workflow
+
+</div>
+
+</div>
+
+<div class="grid grid-cols-3 gap-4 mt-6 text-center text-sm">
+
+<v-click>
+
+<div class="p-4 bg-blue-500/10 rounded-lg">
+
+**Try a few**
+
+Each has different strengths
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="p-4 bg-green-500/10 rounded-lg">
+
+**Match your style**
+
+CLI-first? Visual? PRD-driven?
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="p-4 bg-purple-500/10 rounded-lg">
+
+**Iterate**
+
+Switch if something isn't working
+
+</div>
+
+</v-click>
+
+</div>
+
+<v-click>
+
+<div class="mt-8 text-center opacity-70">
+
+The important thing is having *some* structure for your agent's memory
+
+</div>
+
+</v-click>
+
+<!--
+My honest advice: try a few and see what clicks.
+The space is young and evolving fast.
+-->
+
+---
+layout: center
+---
+
+<div class="text-center">
+
+# Thank You
+
+<div class="mt-6 text-lg">
+
+**Brett Beutell** · Developer @ Fiberplane · Amsterdam
+
+</div>
+
+<div class="flex justify-center gap-6 mt-6 text-sm">
+
+<a href="https://twitter.com/lastgoodhandle" target="_blank" class="flex items-center gap-2 opacity-70 hover:opacity-100 no-underline">
+<span>𝕏</span> @lastgoodhandle
+</a>
+
+<a href="https://github.com/brettimus" target="_blank" class="flex items-center gap-2 opacity-70 hover:opacity-100 no-underline">
+<mdi-github /> @brettimus
+</a>
+
+<a href="https://linkedin.com/in/brettbeutell" target="_blank" class="flex items-center gap-2 opacity-70 hover:opacity-100 no-underline">
+<span>in</span> brettbeutell
+</a>
+
+</div>
+
+<v-click>
+
+<div class="mt-10 p-4 bg-neutral-800 rounded-lg inline-block text-sm opacity-80">
+
+*Built by Claude Code, tracked with fp*
+
+<a href="https://github.com/brettimus/cc-task-managers-talk" target="_blank" class="block mt-2 opacity-70 hover:opacity-100 no-underline">
+View the code →
+</a>
+
+</div>
+
+</v-click>
+
+</div>
+
+<!--
+Thank you! This talk was built by Claude Code using fp.
+Happy to chat about agent workflows, task managers, or how this was made.
+-->
