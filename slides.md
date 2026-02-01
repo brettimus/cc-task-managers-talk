@@ -312,9 +312,7 @@ They clutter your repo and still lose information.
 layout: section
 ---
 
-# Pain Point 2
-
-Reviewing massive Claude PRs is hard
+<h1 class="!text-4xl">Reviewing massive Claude PRs is hard</h1>
 
 <!--
 The second problem hits when you need to verify what Claude actually built.
