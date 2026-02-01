@@ -265,7 +265,7 @@ They work, to a point.
 
 <v-click>
 
-<div class="p-4 bg-red-500/10 rounded-lg">
+<div class="p-4 bg-rose-500/10 border border-rose-500/20 rounded-lg">
 
 ### Codebase clutter
 
@@ -279,7 +279,7 @@ They work, to a point.
 
 <v-click>
 
-<div class="p-4 bg-red-500/10 rounded-lg">
+<div class="p-4 bg-rose-500/10 border border-rose-500/20 rounded-lg">
 
 ### Lost explorations
 
@@ -295,7 +295,7 @@ They work, to a point.
 
 <v-click>
 
-<div class="mt-6 p-4 bg-yellow-500/10 rounded-lg text-center">
+<div class="mt-6 p-4 bg-amber-500/10 rounded-lg text-center">
 
 **We need structured persistence, not scattered docs**
 
