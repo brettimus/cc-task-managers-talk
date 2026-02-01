@@ -107,7 +107,7 @@ I'm Brett, I work at Fiberplane. We built fp, the task manager I'll be showing y
 
 ---
 
-# Meta Demo
+# A Very Meta Demo
 
 <div class="mt-8">
 
