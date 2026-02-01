@@ -27,15 +27,15 @@ Welcome everyone! Today I want to show you something a bit different...
 
 ---
 
-# What Would Claude Build?
+# Claude can help you to help Claude
 
-<div class="text-center mt-12">
+<div class="mt-12">
 
-<div class="text-xl opacity-80 leading-relaxed max-w-2xl mx-auto">
+<div class="text-xl opacity-80 leading-relaxed max-w-2xl">
 
 If you ask Claude to build a tool for itself to be more effective,
 
-you will end up with a **task manager**.
+you will end up with a **lightweight task manager**.
 
 </div>
 
@@ -43,16 +43,16 @@ you will end up with a **task manager**.
 
 <v-click>
 
-<div class="mt-12 text-center opacity-60">
+<div class="mt-12 opacity-60">
 
-Let's find out why.
+There's a reason for that.
 
 </div>
 
 </v-click>
 
 <!--
-What would Claude build for itself? Task management. Every time.
+Claude can help you help Claude be more effective - and task management is what it wants.
 It's not a coincidence - it's a necessity.
 -->
 
