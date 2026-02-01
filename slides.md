@@ -320,7 +320,7 @@ The second problem hits when you need to verify what Claude actually built.
 
 ---
 
-# Claude Makes Mistakes
+# The Wall of Diffs
 
 <div class="grid grid-cols-2 gap-6 mt-6">
 
@@ -328,7 +328,9 @@ The second problem hits when you need to verify what Claude actually built.
 
 <div class="p-4 bg-red-500/10 rounded-lg">
 
-### Common issues
+### Claude still makes mistakes
+
+Opus 4.5 is good but it isn't perfect
 
 - Doesn't delete dead code
 - Creates unnecessary abstractions
@@ -343,14 +345,14 @@ The second problem hits when you need to verify what Claude actually built.
 
 <div class="p-4 bg-neutral-800 rounded-lg">
 
-### The review wall
+### Large changes lack review guidance
 
 Most tools show a wall of diffs
 
 ```diff
 + 47 files changed
-+ 2,341 insertions
-+ 891 deletions
++ 3,847 insertions
++ 1,291 deletions
 ```
 
 Good luck finding the bug.
