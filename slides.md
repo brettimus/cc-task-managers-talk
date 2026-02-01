@@ -512,21 +512,17 @@ Let's look at what's out there for agent-native task management.
 
 # Claude Code (built-in)
 
-<div class="mt-8 p-6 bg-neutral-800 rounded-lg max-w-xl mx-auto">
-
 <v-click>
+
+<div class="mt-8 p-6 bg-neutral-800 rounded-lg max-w-xl">
 
 **Pros:** Works out of the box, no plugins needed
 
-</v-click>
-
-<v-click>
-
 **Cons:** No persistence across sessions, no visualization
 
-</v-click>
-
 </div>
+
+</v-click>
 
 <!--
 The built-in TodoWrite tool. Simple, always available, but limited.
@@ -536,21 +532,17 @@ The built-in TodoWrite tool. Simple, always available, but limited.
 
 # Beads
 
-<div class="mt-8 p-6 bg-neutral-800 rounded-lg max-w-xl mx-auto">
-
 <v-click>
+
+<div class="mt-8 p-6 bg-neutral-800 rounded-lg max-w-xl">
 
 **Pros:** External storage, sync, Claude uses it well
 
-</v-click>
-
-<v-click>
-
 **Cons:** Wild west integration, bring your own review tools
 
-</v-click>
-
 </div>
+
+</v-click>
 
 <!--
 Beads gives you external persistence but leaves review up to you.
@@ -560,21 +552,17 @@ Beads gives you external persistence but leaves review up to you.
 
 # fp
 
-<div class="mt-8 p-6 bg-neutral-800 rounded-lg max-w-xl mx-auto">
-
 <v-click>
+
+<div class="mt-8 p-6 bg-neutral-800 rounded-lg max-w-xl">
 
 **Pros:** External storage + integrated review tooling
 
-</v-click>
-
-<v-click>
-
 **Cons:** Smaller community, cloud sync requires account
 
-</v-click>
-
 </div>
+
+</v-click>
 
 <!--
 fp is what I use. Disclaimer: I work on it. But I genuinely think the review integration matters.
