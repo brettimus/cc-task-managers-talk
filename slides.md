@@ -650,7 +650,7 @@ The million dollar question.
 
 # Explore What's Out There
 
-<div class="mt-8 text-center">
+<div class="mt-8">
 
 <div class="text-xl opacity-80 mb-8">
 
@@ -660,7 +660,7 @@ There's no "best" tool - find what fits your workflow
 
 </div>
 
-<div class="grid grid-cols-3 gap-4 mt-6 text-center">
+<div class="grid grid-cols-3 gap-4 mt-6">
 
 <v-click>
 
