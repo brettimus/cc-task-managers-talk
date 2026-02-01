@@ -495,7 +495,7 @@ Natural language intent tied to commits
 
 <div class="mt-6 text-center text-lg">
 
-**These capabilities work together to create persistent, structured memory**
+**These capabilities work together to create a form of persistent memory**
 
 </div>
 
