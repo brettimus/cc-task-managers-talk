@@ -66,22 +66,22 @@ It's not a coincidence - it's a necessity.
 
 <div class="text-2xl font-semibold mb-2">Brett Beutell</div>
 
-<div class="text-lg opacity-80 mb-6">Developer @ Fiberplane · Amsterdam</div>
+<div class="text-lg opacity-80 mb-6">Engineering Lead @ Fiberplane · Amsterdam</div>
 
 <div class="space-y-3 text-sm">
 
 <div class="flex items-center gap-3">
-<span class="text-lg">𝕏</span>
+<span class="text-lg w-5 text-center">𝕏</span>
 <a href="https://twitter.com/lastgoodhandle" target="_blank">@lastgoodhandle</a>
 </div>
 
 <div class="flex items-center gap-3">
-<mdi-github class="text-lg" />
+<mdi-github class="text-lg w-5 text-center" />
 <a href="https://github.com/brettimus" target="_blank">@brettimus</a>
 </div>
 
 <div class="flex items-center gap-3">
-<span class="text-lg">in</span>
+<span class="text-lg w-5 text-center">in</span>
 <a href="https://linkedin.com/in/brettbeutell" target="_blank">in/brettbeutell</a>
 </div>
 
@@ -92,9 +92,9 @@ It's not a coincidence - it's a necessity.
 <div class="flex items-center justify-center">
 
 <div class="p-6 bg-neutral-800 rounded-xl text-center">
-<div class="text-4xl mb-3">⚡</div>
+<img src="/fiberplane-logo.svg" class="w-10 h-10 mx-auto mb-3" alt="Fiberplane" />
 <div class="text-xl font-semibold mb-1">Fiberplane</div>
-<div class="text-sm opacity-70">fp.dev</div>
+<a href="https://fp.dev" target="_blank" class="text-sm opacity-70 hover:opacity-100">fp.dev</a>
 </div>
 
 </div>
