@@ -512,8 +512,6 @@ layout: section
 
 # What Solutions Exist
 
-From built-in to purpose-built
-
 <!--
 Let's look at what's out there for agent-native task management.
 -->
