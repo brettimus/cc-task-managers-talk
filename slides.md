@@ -149,7 +149,7 @@ Let's start with the first problem you'll hit when doing real work with Claude C
 
 <v-click>
 
-<div class="p-4 bg-neutral-800 rounded-lg text-center">
+<div class="p-4 bg-neutral-800 rounded-lg">
 
 **Context is finite**
 
@@ -161,7 +161,7 @@ Performance degrades as you add more
 
 <v-click>
 
-<div class="p-4 bg-neutral-800 rounded-lg text-center">
+<div class="p-4 bg-neutral-800 rounded-lg">
 
 **Compaction isn't great**
 
@@ -173,7 +173,7 @@ Getting better, but lossy
 
 <v-click>
 
-<div class="p-4 bg-neutral-800 rounded-lg text-center">
+<div class="p-4 bg-neutral-800 rounded-lg">
 
 **Wrong turns happen**
 
@@ -187,7 +187,7 @@ Dead ends deserve documentation
 
 <v-click>
 
-<div class="mt-8 p-4 bg-orange-500/10 rounded-lg text-center">
+<div class="mt-8 p-4 bg-amber-500/10 rounded-lg text-center">
 
 **Any ambitious project spans multiple sessions**
 
