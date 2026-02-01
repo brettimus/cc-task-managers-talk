@@ -670,13 +670,13 @@ There's no "best" tool - find what fits your workflow
 
 </div>
 
-<div class="grid grid-cols-3 gap-4 mt-6 text-center text-sm">
+<div class="grid grid-cols-3 gap-4 mt-6 text-center">
 
 <v-click>
 
 <div class="p-4 bg-blue-500/10 rounded-lg">
 
-**Try a few**
+<div class="text-lg font-semibold mb-2">Try a few</div>
 
 Each has different strengths
 
@@ -688,7 +688,7 @@ Each has different strengths
 
 <div class="p-4 bg-green-500/10 rounded-lg">
 
-**Match your style**
+<div class="text-lg font-semibold mb-2">Match your style</div>
 
 CLI-first? Visual? PRD-driven?
 
@@ -700,7 +700,7 @@ CLI-first? Visual? PRD-driven?
 
 <div class="p-4 bg-purple-500/10 rounded-lg">
 
-**Iterate**
+<div class="text-lg font-semibold mb-2">Iterate</div>
 
 Switch if something isn't working
 
