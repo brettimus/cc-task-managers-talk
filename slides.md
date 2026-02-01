@@ -92,7 +92,7 @@ It's not a coincidence - it's a necessity.
 <div class="flex items-center justify-center">
 
 <div class="p-6 bg-neutral-800 rounded-xl text-center">
-<img src="/fiberplane-logo.svg" class="w-10 h-10 mx-auto mb-3" alt="Fiberplane" />
+<img src="/fiberplane-logo.svg" class="w-10 h-10 mx-auto mb-3 fp-logo-white" alt="Fiberplane" />
 <div class="text-xl font-semibold mb-1">Fiberplane</div>
 <a href="https://fp.dev" target="_blank" class="text-sm opacity-70 hover:opacity-100">fp.dev</a>
 </div>
@@ -752,7 +752,7 @@ layout: center
 <div class="flex items-center justify-center gap-2 mb-3">
 <span>🤖</span>
 <span>Built by Claude Code, tracked with</span>
-<img src="/fiberplane-logo.svg" class="w-4 h-4 inline" alt="fp" />
+<img src="/fiberplane-logo.svg" class="w-4 h-4 inline fp-logo-white" alt="fp" />
 <span>fp</span>
 </div>
 

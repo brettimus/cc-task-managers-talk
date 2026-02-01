@@ -512,3 +512,8 @@
   font-weight: 300;
   padding-top: 3rem;
 }
+
+/* Fiberplane logo - invert to white for dark backgrounds */
+.fp-logo-white {
+  filter: brightness(0) invert(1);
+}
