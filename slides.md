@@ -431,8 +431,6 @@ layout: section
 
 # What Task Managers Solve
 
-The core capabilities that address these pain points
-
 <!--
 Now let's look at what task managers actually provide.
 -->
