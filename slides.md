@@ -388,7 +388,7 @@ When you're staring at 47 changed files, how do you know what to check?
 
 - Narrative-based review
 - Per-task diffs
-- Structured commits
+- Structured commits (reasoning traces)
 
 </div>
 
@@ -409,16 +409,6 @@ When you're staring at 47 changed files, how do you know what to check?
 </div>
 
 </div>
-
-<v-click>
-
-<div class="mt-6 text-center opacity-70">
-
-This is where task managers start to help
-
-</div>
-
-</v-click>
 
 <!--
 This is genuinely an open problem. But the insight is: review by task, not by PR.
