@@ -202,6 +202,37 @@ But how do you carry forward what you learned?
 
 ---
 
+# The Development Cycle
+
+<CycleGraphic />
+
+<v-click>
+
+<div class="mt-4 text-center opacity-80">
+
+The more capable Claude becomes, the more important **Planning** becomes — and the more difficult **Review** becomes
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="mt-4 text-center text-sm opacity-60">
+
+We can't plan everything up front; often we need explorations and iterations
+
+</div>
+
+</v-click>
+
+<!--
+This is the development cycle. As Claude gets more capable, planning matters more and review gets harder.
+And we can't plan everything upfront - we learn as we go.
+-->
+
+---
+
 # Current Solutions
 
 <div class="grid grid-cols-2 gap-6 mt-6">
