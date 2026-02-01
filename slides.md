@@ -135,9 +135,7 @@ I'm not just talking about task managers - I'm using one to build this talk.
 layout: section
 ---
 
-# Pain Point 1
-
-Ambitious work requires multiple Claude Code sessions
+<h1 class="!text-4xl">Ambitious work requires multiple Claude sessions</h1>
 
 <!--
 Let's start with the first problem you'll hit when doing real work with Claude Code.
