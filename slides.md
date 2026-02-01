@@ -499,6 +499,47 @@ Together they give your agent a memory that survives context windows.
 -->
 
 ---
+
+# Sharing Your Brain with Claude
+
+<div class="mt-8">
+
+<div class="text-xl opacity-80 leading-relaxed max-w-2xl">
+
+You already do this while coding - jot down notes, file bugs for later, keep track of ideas
+
+</div>
+
+</div>
+
+<v-click>
+
+<div class="mt-8 p-4 bg-neutral-800 rounded-lg max-w-xl">
+
+<div class="text-sm font-mono opacity-70 mb-2">// While implementing auth...</div>
+
+"Oh, this error message is confusing - I'll file that for later"
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="mt-6 text-center opacity-70">
+
+**Task managers give Claude the same ability to stay focused and capture context**
+
+</div>
+
+</v-click>
+
+<!--
+This is something we naturally do as humans - keep notes, file things for later.
+Task managers extend this capability to Claude, letting it stay focused while not losing track of observations.
+-->
+
+---
 layout: section
 ---
 
