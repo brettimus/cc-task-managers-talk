@@ -735,21 +735,21 @@ layout: center
 
 <div class="mt-6 text-lg">
 
-**Brett Beutell** · Developer @ Fiberplane · Amsterdam
+**Brett Beutell** · Engineering Lead @ Fiberplane · Amsterdam
 
 </div>
 
 <div class="flex justify-center gap-6 mt-6 text-sm">
 
-<a href="https://twitter.com/lastgoodhandle" target="_blank" class="flex items-center gap-2 opacity-70 hover:opacity-100 no-underline">
+<a href="https://twitter.com/lastgoodhandle" target="_blank" class="flex items-center gap-2 text-blue-400 hover:text-blue-300 no-underline">
 <span>𝕏</span> @lastgoodhandle
 </a>
 
-<a href="https://github.com/brettimus" target="_blank" class="flex items-center gap-2 opacity-70 hover:opacity-100 no-underline">
+<a href="https://github.com/brettimus" target="_blank" class="flex items-center gap-2 text-blue-400 hover:text-blue-300 no-underline">
 <mdi-github /> @brettimus
 </a>
 
-<a href="https://linkedin.com/in/brettbeutell" target="_blank" class="flex items-center gap-2 opacity-70 hover:opacity-100 no-underline">
+<a href="https://linkedin.com/in/brettbeutell" target="_blank" class="flex items-center gap-2 text-blue-400 hover:text-blue-300 no-underline">
 <span>in</span> brettbeutell
 </a>
 
@@ -757,12 +757,17 @@ layout: center
 
 <v-click>
 
-<div class="mt-10 p-4 bg-neutral-800 rounded-lg inline-block text-sm opacity-80">
+<div class="mt-10 px-6 py-4 bg-neutral-800 rounded-lg inline-block text-sm">
 
-*Built by Claude Code, tracked with fp*
+<div class="flex items-center justify-center gap-2 mb-3">
+<span>🤖</span>
+<span>Built by Claude Code, tracked with</span>
+<img src="/fiberplane-logo.svg" class="w-4 h-4 inline" alt="fp" />
+<span>fp</span>
+</div>
 
-<a href="https://github.com/brettimus/cc-task-managers-talk" target="_blank" class="block mt-2 opacity-70 hover:opacity-100 no-underline">
-View the code →
+<a href="https://github.com/brettimus/cc-task-managers-talk" target="_blank" class="flex items-center justify-center gap-2 text-blue-400 hover:text-blue-300 no-underline">
+<mdi-github class="text-base" /> View the code
 </a>
 
 </div>
