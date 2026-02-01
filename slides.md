@@ -378,47 +378,35 @@ When you're staring at 47 changed files, how do you know what to check?
 
 ---
 
-# An Open Problem
+# People are working on this
 
-<div class="mt-8 text-center">
-
-<div class="text-xl opacity-80 mb-8">
-
-No one has cracked this yet... but progress is happening
-
-</div>
-
-</div>
-
-<div class="grid grid-cols-2 gap-6">
-
-<v-click>
+<div class="grid grid-cols-2 gap-6 mt-6">
 
 <div class="p-4 bg-blue-500/10 rounded-lg">
 
-### Narrative-based review
+### Approaches
 
-- Devin-style PR summaries
-- Per-task diffs (fp, Vibe Kanban)
-- Stories, not just code
-
-</div>
-
-</v-click>
-
-<v-click>
-
-<div class="p-4 bg-purple-500/10 rounded-lg">
-
-### Structured commits
-
-- Link commits to tasks
-- Review by intention
-- Trace reasoning
+- Narrative-based review
+- Per-task diffs
+- Structured commits
 
 </div>
 
-</v-click>
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+### Resources
+
+<div class="text-sm space-y-1 mt-2">
+
+- <a href="https://linear.app/reviews" target="_blank">Linear Reviews</a>
+- <a href="https://docs.devin.ai/work-with-devin/devin-review" target="_blank">Devin Review</a>
+- <a href="https://cursor.com/blog/graphite" target="_blank">Graphite + Cursor</a>
+- <a href="https://x.com/evanjconrad" target="_blank">@evanjconrad</a>
+- <a href="https://x.com/benhylak" target="_blank">@benhylak</a>
+
+</div>
+
+</div>
 
 </div>
 
