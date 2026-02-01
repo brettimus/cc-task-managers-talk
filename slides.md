@@ -518,17 +518,13 @@ Let's look at what's out there for agent-native task management.
 
 ---
 
-# The Landscape
+# Claude Code (built-in)
 
-<div class="grid grid-cols-2 gap-6 mt-4">
-
-<div class="p-4 bg-neutral-800 rounded-lg">
-
-### Claude Code (built-in)
+<div class="mt-8 p-6 bg-neutral-800 rounded-lg max-w-xl mx-auto">
 
 <v-click>
 
-**Pros:** Works out of the box, no plugins
+**Pros:** Works out of the box, no plugins needed
 
 </v-click>
 
@@ -540,9 +536,15 @@ Let's look at what's out there for agent-native task management.
 
 </div>
 
-<div class="p-4 bg-neutral-800 rounded-lg">
+<!--
+The built-in TodoWrite tool. Simple, always available, but limited.
+-->
 
-### Beads
+---
+
+# Beads
+
+<div class="mt-8 p-6 bg-neutral-800 rounded-lg max-w-xl mx-auto">
 
 <v-click>
 
@@ -558,22 +560,15 @@ Let's look at what's out there for agent-native task management.
 
 </div>
 
-</div>
-
 <!--
-Two ends of the spectrum: built-in TodoWrite vs external tools like Beads.
-Both have tradeoffs.
+Beads gives you external persistence but leaves review up to you.
 -->
 
 ---
 
-# More Options
+# fp
 
-<div class="grid grid-cols-2 gap-6 mt-4">
-
-<div class="p-4 bg-neutral-800 rounded-lg">
-
-### fp
+<div class="mt-8 p-6 bg-neutral-800 rounded-lg max-w-xl mx-auto">
 
 <v-click>
 
@@ -589,41 +584,66 @@ Both have tradeoffs.
 
 </div>
 
+<!--
+fp is what I use. Disclaimer: I work on it. But I genuinely think the review integration matters.
+-->
+
+---
+
+# Other Options
+
+<div class="grid grid-cols-3 gap-4 mt-8">
+
+<v-click>
+
 <div class="p-4 bg-neutral-800 rounded-lg">
 
-### Others
+**Taskmaster**
 
-<v-click>
+PRD to tasks
 
-- **Taskmaster** - PRD to tasks
-- **Vibe Kanban** - Multi-agent, per-task diffs
-- **Beans** - Flat-file, token-efficient
+</div>
 
 </v-click>
 
 <v-click>
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+**Vibe Kanban**
+
+Multi-agent, per-task diffs
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="p-4 bg-neutral-800 rounded-lg">
+
+**Beans**
+
+Flat-file, token-efficient
+
+</div>
+
+</v-click>
+
+</div>
+
+<v-click>
+
+<div class="mt-8 text-center opacity-70">
 
 *Many more emerging weekly*
-
-</v-click>
-
-</div>
-
-</div>
-
-<v-click>
-
-<div class="mt-6 p-4 bg-blue-500/10 rounded-lg text-center">
-
-**No "best" tool - they all solve the core problem differently**
 
 </div>
 
 </v-click>
 
 <!--
-fp is what I use (disclaimer: I work on it). But there are many good options.
-The space is evolving rapidly.
+The space is evolving rapidly. New tools appear all the time.
 -->
 
 ---
