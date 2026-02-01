@@ -439,7 +439,7 @@ Now let's look at what task managers actually provide.
 
 ### External plan storage
 
-Plans and sub-tasks live outside the context window
+Plans and subtasks persist longer than the 30-day .claude dir default
 
 </div>
 
@@ -449,7 +449,7 @@ Plans and sub-tasks live outside the context window
 
 <div class="p-4 bg-green-500/10 rounded-lg">
 
-### Exploration docs
+### Record of Exploration
 
 Document what you tried - including failures
 
@@ -487,7 +487,7 @@ Natural language intent tied to commits
 
 <div class="mt-6 text-center text-lg">
 
-**These capabilities work together to create a form of persistent memory**
+**These work together to create a shared brain with Claude**
 
 </div>
 
