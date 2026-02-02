@@ -151,14 +151,14 @@
           dominant-baseline="middle"
           fill="oklch(0.97 0.005 260)"
           class="node-label"
-        >EXECUTE</text>
+        >IMPLEMENT</text>
         <text
           x="250" y="62"
           text-anchor="middle"
           dominant-baseline="middle"
           fill="oklch(0.65 0.20 155)"
           class="node-sublabel"
-        >implement</text>
+        >build</text>
       </g>
 
       <!-- Node: REVIEW (right) -->
