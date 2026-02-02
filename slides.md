@@ -68,6 +68,8 @@ It's not a coincidence - it's a necessity.
 
 <div class="text-lg opacity-80 mb-6">Engineering Lead @ Fiberplane · Amsterdam</div>
 
+<v-click>
+
 <div class="space-y-3 text-sm">
 
 <div class="flex items-center gap-3">
@@ -87,7 +89,11 @@ It's not a coincidence - it's a necessity.
 
 </div>
 
+</v-click>
+
 </div>
+
+<v-click>
 
 <div class="flex items-center justify-center">
 
@@ -98,6 +104,8 @@ It's not a coincidence - it's a necessity.
 </div>
 
 </div>
+
+</v-click>
 
 </div>
 
@@ -237,6 +245,8 @@ And we can't plan everything upfront - we learn as we go.
 
 <div class="grid grid-cols-2 gap-6 mt-6">
 
+<v-click>
+
 <div class="p-4 bg-neutral-800 rounded-lg">
 
 ### SPEC files
@@ -251,6 +261,8 @@ SPEC.md
 ```
 
 </div>
+
+</v-click>
 
 <v-click>
 
@@ -415,6 +427,8 @@ When you're staring at 47 changed files, how do you know what to check?
 
 <div class="grid grid-cols-2 gap-6 mt-6">
 
+<v-click>
+
 <div class="p-4 bg-blue-500/10 rounded-lg">
 
 ### Approaches
@@ -424,6 +438,10 @@ When you're staring at 47 changed files, how do you know what to check?
 - Structured commits (reasoning traces)
 
 </div>
+
+</v-click>
+
+<v-click>
 
 <div class="p-4 bg-neutral-800 rounded-lg">
 
@@ -440,6 +458,8 @@ When you're staring at 47 changed files, how do you know what to check?
 </div>
 
 </div>
+
+</v-click>
 
 </div>
 
