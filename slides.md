@@ -26,6 +26,24 @@ Welcome everyone! Today I want to show you something a bit different...
 -->
 
 ---
+layout: center
+---
+
+<div class="text-center">
+
+<div class="text-xl opacity-70 mb-6">Follow along at</div>
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://cct.boots.lol/" class="mx-auto rounded-lg" alt="QR Code" />
+
+<a href="https://cct.boots.lol/" target="_blank" class="block mt-4 text-2xl text-blue-400 hover:text-blue-300">cct.boots.lol</a>
+
+</div>
+
+<!--
+Scan this to follow along on your device.
+-->
+
+---
 
 # Claude can help you to help Claude
 
@@ -851,4 +869,22 @@ layout: center
 <!--
 Thank you! This talk was built by Claude Code using fp.
 Happy to chat about agent workflows, task managers, or how this was made.
+-->
+
+---
+layout: center
+---
+
+<div class="text-center">
+
+<div class="text-xl opacity-70 mb-6">View slides & source</div>
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://cct.boots.lol/" class="mx-auto rounded-lg" alt="QR Code" />
+
+<a href="https://cct.boots.lol/" target="_blank" class="block mt-4 text-2xl text-blue-400 hover:text-blue-300">cct.boots.lol</a>
+
+</div>
+
+<!--
+Scan to view slides on your device or revisit later.
 -->
